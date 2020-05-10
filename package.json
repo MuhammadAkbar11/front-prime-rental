@@ -1,0 +1,19 @@
+{
+	"name": "front-prime-rental",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "webpack-dev-server  --config webpack.dev.js --open",
+		"build": "webpack  --config webpack.prod.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"webpack": "^4.43.0",
+		"webpack-cli": "^3.3.11",
+		"webpack-dev-server": "^3.11.0",
+		"webpack-merge": "^4.2.2"
+	}
+}
