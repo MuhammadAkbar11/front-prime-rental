@@ -1,6 +1,6 @@
 @import '../components/banner';
 @import '../components/buttons';
-
+@import '../layout/service';
 @include media-breakpoint-down(md) {
 	.banner {
 		&__card {
@@ -12,6 +12,7 @@
 // @include media-breakpoint-down(sm) { ... }
 @include media-breakpoint-up(md) {
 	.jumbotron {
+		height: 120vh;
 		&__row {
 			height: 100% !important;
 		}

@@ -57,7 +57,7 @@ $spacer: 1rem;
 $spacers: (
 	0: 0,
 );
-@for $i from 1 through 30 {
+@for $i from 1 through 50 {
 	$spacers: map-merge(
 		$spacers,
 		(
