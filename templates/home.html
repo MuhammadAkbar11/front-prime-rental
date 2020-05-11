@@ -10,20 +10,31 @@
 
 <body>
 
-    <nav class="navbar navbar-light bg-secondary d-sm-none fixed-bottom d-flex shadow shadow-sm">
-        <!-- <div class="navbar-nav d-flex"> -->
-        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Mobil Kami</a>
-        <a class="nav-item nav-link" href="#">Tentang</a>
-        <a class="nav-item nav-link btn btn-outline-primary" href="#">Login</a>
+    <nav class="navbar navbar-light bg-secondary d-md-none fixed-bottom d-flex shadow shadow-sm pb-2">
+        <!-- navbar mobile -->
+        <a class="nav-item nav-link text-center  " href="#"> <i class=" fas fa-2x fa-fw fa-home"></i> <br>
+            <span>Home</span></a>
+        <a class="nav-item nav-link text-center" href="#"><i class="fas fa-2x fa-fw fa-car"></i><br>
+            <span>Mobil Kami</span></a>
+        <a class="btn btn-primary text-secondary " href="#"><i class="fas fa-2x fa-fw fa-layer-group"></i><br>
+            <span>More</span></a>
+
+        <a class="nav-item nav-link text-center" href="#">
+            <i class="fas fa-fw fa-2x fa-info-circle"></i>
+            <br>
+            <span>Tentang</span></a>
+        <a class="nav-item nav-link text-center" href="#"><i class="fas fa-user fa-2x fa-fw"></i> <br><span>
+                Akun
+            </span></a>
         <!-- </div> -->
 
     </nav>
 
-    <div class="jumbotron jumbotron-fluid vh-120 bg-light my-0 pt-0 pt-lg-3 banner pb-6 " style="overflow-y: hidden;">
+    <div class="jumbotron jumbotron-fluid vh-120 bg-light my-0 pt-0 pt-sm-2 pt-lg-3  banner pb-6 "
+        style="overflow-y: hidden;">
         <div class="container-fluid h-100 px-0 mt-0 ">
             <div class="col-12 h-100">
-                <div class="row pt-0 jumbotron__row h-100">
+                <div class="row pt-0 jumbotron__row">
                     <!-- h-lg-100 -->
                     <div class="col-md-1 d-none d-md-block py-sm-4 py-md-2  ">
                         <div
@@ -46,9 +57,29 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-11 pr-md-4 px-1 py-2 py-lg-0 ">
-                        <div class="banner__card ">
-                            <div class="col-12 px-0 pt-2 pt-md-1 ">
+                    <div class="col-12 d-md-none px-0 pt-2 pt-md-1 pb-3 ">
+                        <!-- Navbar -->
+                        <nav class="navbar navbar-expand-sm navbar-light bg-transparent px-0">
+                            <div class="container-fluid">
+                                <div class="row px-2">
+                                    <a class="navbar-brand font-25px col-12 " href=" #">PrimeRental</a>
+                                    <div class="input-group mt-2 col-12">
+                                        <input type="text" class="form-control bg-transparent  border-secondary "
+                                            placeholder="Search" aria-label="Recipient's username"
+                                            aria-describedby="search">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button" id="search"><i
+                                                    class="fas fa-search"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                        <!-- /Navbar -->
+                    </div>
+                    <div class="col-12 col-md-11 pr-md-4 px-1 py-lg-0 ">
+                        <div class="banner__card py-2 ">
+                            <div class="col-12 d-none d-md-inline-block px-0 pt-2 pt-md-1 ">
                                 <!-- Navbar -->
                                 <nav class="navbar navbar-expand-sm navbar-dark bg-transparent px-0">
                                     <div class="container-md px-4 px-md-2 px-lg-4 ">
@@ -68,15 +99,17 @@
                                 <!-- /Navbar -->
                             </div>
                             <div class="col-12 my-auto">
-                                <div class="row px-2 ">
-                                    <div class="col-12 col-md-7 col-lg-6 col-xl-5 pl-xl-4  pr-0  ">
+                                <div class="row px-2 d-flex ">
+                                    <div class="col-12 col-md-7  col-lg-6 col-xl-5 pl-xl-4  pr-0  ">
                                         <div class="row  h-100  align-content-center ">
                                             <div class="col-md-10 ">
-                                                <span class=" text-primary-70 mb-2 text-left font-md-23px ">Tunggu Apa
+                                                <span
+                                                    class=" text-primary-70 mb-2 text-left font-13px font-md-23px  ">Tunggu
+                                                    Apa
                                                     Lagi?</span>
                                             </div>
                                             <div class="col-md-12 ">
-                                                <p class="text-white font-30px font-md-28px font-lg-6 text-capitalize">
+                                                <p class="text-white  font-20px font-md-28px font-lg-6 text-capitalize">
                                                     sangat mudah
                                                     untuk Anda
                                                     menyewa
@@ -90,9 +123,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-5 col-lg-6 col-xl-7 px-md-0 mt-5 ">
+                                    <div class="col-12  col-md-5 col-lg-6 col-xl-7 px-md-0">
                                         <div class="row d-flex">
-                                            <div class="order-1 col-8 offset-md-0 col-md-12">
+                                            <div class="order-1 col-6 offset-md-0 col-md-12">
                                                 <img class="img-fluid" src="../src/img/imgbanner.png" alt="">
                                             </div>
                                             <div
