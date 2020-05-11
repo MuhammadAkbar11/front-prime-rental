@@ -1,3 +1,6 @@
-import { test } from './js/pages/home.page';
+import Test from './js/pages/home.page';
+import './scss/main.scss';
 
-test();
+const test = new Test();
+
+test.data('hayy');

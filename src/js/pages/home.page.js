@@ -1,3 +1,5 @@
-export const test = () => {
-	console.log('ok');
-};
+export default class Test {
+	data(param) {
+		console.log(param);
+	}
+}
