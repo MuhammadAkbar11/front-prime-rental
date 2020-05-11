@@ -1,0 +1,89 @@
+@import './sizing';
+
+// $sides: (
+// 	'': '',
+// 	't': 'top',
+// 	'b': 'bottom',
+// 	'l': 'left',
+// 	'r': 'right',
+// );
+
+$breakpoints: (
+	'': '',
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px,
+);
+
+@each $breakName, $breakValue in $breakpoints {
+	@for $i from 5 to 100 {
+		$px: $i * 1;
+		$rem: $i * 0.5;
+
+		$selector: '';
+		@if $breakName != '' {
+			$selector: #{$breakName}-#{$i};
+		} @else {
+			$selector: #{$i};
+		}
+
+		@if $breakName != '' {
+			@media (min-width: $breakValue) {
+				.font-#{$selector}px {
+					font-size: #{$px}px !important;
+				}
+				.font-#{$selector} {
+					font-size: #{$rem}rem !important;
+				}
+			}
+		} @else {
+			.font-#{$selector}px {
+				font-size: #{$px}px !important;
+			}
+			.font-#{$selector} {
+				font-size: #{$rem}rem !important;
+			}
+		}
+	}
+}
+
+@mixin transition-ease {
+	transition: all 0.5s ease-in-out;
+}
+
+// @each $breakName, $breakValue in $breakpoints {
+// 	@each $sideName, $sideValue in $sides {
+// 		@for $i from 6 through 50 {
+// 			$property: if($sideName == '', '', -#{$sideValue});
+// 			$space: $i * 0.5;
+// 			$selector: '';
+
+// 			@if $breakName != '' {
+// 				$selector: #{$sideName}-#{$breakName}-#{$i};
+// 			} @else {
+// 				$selector: #{$sideName}-#{$i};
+// 			}
+
+// 			@if $breakName != '' {
+// 				@media (min-width: $breakValue) {
+// 					.m#{$selector} {
+// 						margin#{$property}: #{$space}rem;
+// 					}
+
+// 					.p#{$selector} {
+// 						padding#{$property}: #{$space}rem;
+// 					}
+// 				}
+// 			} @else {
+// 				.m#{$selector} {
+// 					margin#{$property}: #{$space}rem;
+// 				}
+
+// 				.p#{$selector} {
+// 					padding#{$property}: #{$space}rem;
+// 				}
+// 			}
+// 		}
+// 	}
+// }

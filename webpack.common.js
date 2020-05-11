@@ -20,6 +20,15 @@ module.exports = {
 					},
 				},
 			},
+			{
+				test: /\.(eot|gif|otf|png|svg|ttf|woff)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+				use: ['file-loader'],
+				options: {
+					name: '[name].[ext]',
+					outputPath: 'assets/img',
+					publicPath: 'assets/img',
+				},
+			},
 			{ test: /\.hbs$/, loader: 'handlebars-loader' },
 		],
 	},

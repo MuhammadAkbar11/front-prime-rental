@@ -2,6 +2,7 @@ const path = require('path');
 const _common = require('./webpack.common');
 const WebpackMerge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 
@@ -24,7 +25,12 @@ module.exports = WebpackMerge(_common, {
 			{
 				test: /\.scss$/,
 				exclude: /node_modules/,
-				use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+				use: [
+					MiniCssExtractPlugin.loader,
+					'css-loader',
+					'postcss-loader',
+					'sass-loader',
+				],
 			},
 		],
 	},
@@ -33,6 +39,9 @@ module.exports = WebpackMerge(_common, {
 			options: {
 				postcss: [autoprefixer()],
 			},
+		}),
+		new MiniCssExtractPlugin({
+			filename: 'css/[name].css',
 		}),
 		new HtmlWebpackPlugin({
 			template: './templates/home.html',

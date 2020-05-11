@@ -1,2 +1,71 @@
-$primary: #ffd37e;
-$secondary: #22264c;
+@import '../util/variables';
+
+$navbar-dark-color: rgba($primary, 0.5) !default;
+$navbar-dark-hover-color: rgba($primary, 0.75) !default;
+$navbar-dark-active-color: $primary !default;
+$navbar-dark-disabled-color: rgba($primary, 0.25) !default;
+
+// stylelint-disable-next-line scss/dollar-variable-default
+// $spacer: 1rem !default;
+// $spacers: () !default;
+// // stylelint-disable-next-line scss/dollar-variable-default
+// $spacers: map-merge(
+// 	(
+// 		0: 0,
+// 		1: (
+// 			$spacer * 0.25,
+// 		),
+// 		2: (
+// 			$spacer * 0.5,
+// 		),
+// 		3: $spacer,
+// 		4: (
+// 			$spacer * 1.5,
+// 		),
+// 		5: (
+// 			$spacer * 2,
+// 		),
+// 		6: (
+// 			$spacer * 2.25,
+// 		),
+// 		7: (
+// 			$spacer * 2.5,
+// 		),
+// 		8: (
+// 			$spacer * 3,
+// 		),
+// 		9: (
+// 			$spacer * 3.25,
+// 		),
+// 		10: (
+// 			$spacer * 3.5,
+// 		),
+// 		11: (
+// 			$spacer * 4,
+// 		),
+// 		12: (
+// 			$spacer * 4.25,
+// 		),
+// 		13: (
+// 			$spacer * 4.5,
+// 		),
+// 	),
+// 	$spacers
+// );
+
+$spacer: 1rem;
+$spacers: (
+	0: 0,
+);
+@for $i from 1 through 30 {
+	$spacers: map-merge(
+		$spacers,
+		(
+			$i: (
+				$i * $spacer * 0.55,
+			),
+		)
+	);
+}
+
+// stylelint-disable-next-line scss/dollar-variable-default

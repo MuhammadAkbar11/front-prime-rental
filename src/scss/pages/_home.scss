@@ -1,0 +1,34 @@
+@import '../components/banner';
+@import '../components/buttons';
+
+@include media-breakpoint-down(md) {
+	.banner {
+		&__card {
+			border-radius: 10px;
+			box-shadow: 0 0 5px 2px rgba($color: #000000, $alpha: 0.5);
+		}
+	}
+}
+// @include media-breakpoint-down(sm) { ... }
+@include media-breakpoint-up(md) {
+	.jumbotron {
+		&__row {
+			height: 100% !important;
+		}
+	}
+}
+// @include media-breakpoint-down(lg) {
+// 	.jumbotron {
+// 		&__row {
+// 			height: 100% !important;
+// 		}
+// 	}
+// }
+
+// @include media-breakpoint-up(xl) {
+// 	.jumbotron {
+// 		&__row {
+// 			height: 100% !important;
+// 		}
+// 	}
+// }

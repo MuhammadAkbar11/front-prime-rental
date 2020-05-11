@@ -1,13 +1,18 @@
-@import './base/typography';
 // theme
 @import './themes/theme';
 
 @import './util/variables';
+
 @import './util/functions';
 @import './util/mixins';
+@import './base/typography';
 
 // vendors
 @import './vendors/bootstrap';
 
 // pages
 @import './pages/home';
+
+body {
+	font-family: $montSerrat;
+}
