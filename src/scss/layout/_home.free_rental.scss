@@ -1,0 +1,90 @@
+.free-rental {
+	display: flex;
+	margin: {
+		top: 10rem !important;
+	}
+
+	.row .col &__card {
+		border: none;
+		background: transparent;
+
+		background-color: rgba(131, 131, 131, 0);
+		transition: 0.15s ease-in-out;
+		::before {
+			content: '';
+			background-color: $secondary;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 0;
+			z-index: -1;
+			// height: 100%;
+			transition: 0.25s all ease-in-out;
+			-webkit-clip-path: circle(28.4% at 93% 100%);
+			clip-path: circle(28.4% at 93% 100%);
+		}
+
+		.card__brand {
+			text-align: center;
+			color: $secondary;
+		}
+		.card__type {
+			font-weight: 800;
+			color: rgba(set-text-color($primary), $alpha: 0.7);
+		}
+
+		.card__price {
+			color: rgba($secondary, $alpha: 1);
+		}
+
+		.card__btn {
+			&-sewa {
+				background-color: rgba($secondary, $alpha: 1);
+				color: rgba($white, $alpha: 0.9);
+			}
+
+			&-detail {
+				background-color: #ccc7c7 !important;
+			}
+		}
+
+		&:hover {
+			& {
+				transform: scale(1.15) translateY(-1rem);
+				box-shadow: 0 0px 15px 5px rgba($dark, $alpha: 0.4);
+			}
+			::before {
+				height: 77%;
+				-webkit-clip-path: circle(113.7% at 93% 100%);
+				clip-path: circle(113.7% at 93% 100%);
+				// -webkit-clip-path: circle(65% at 50% 84%);
+				// clip-path: circle(65% at 50% 84%);
+			}
+			.card__brand {
+				text-align: center;
+				color: $primary;
+			}
+			.card__type {
+				font-weight: 800;
+				color: rgba(set-text-color($secondary), $alpha: 0.75);
+			}
+
+			.card__price {
+				color: rgba($white, $alpha: 0.9);
+			}
+
+			.card__btn {
+				&-sewa {
+					background-color: rgba($primary, $alpha: 1);
+					color: rgba($secondary, $alpha: 1);
+				}
+
+				&-detail {
+					color: rgba($white, $alpha: 0.6);
+					background-color: rgba($bg-public, $alpha: 0.7) !important;
+				}
+			}
+		}
+	}
+}

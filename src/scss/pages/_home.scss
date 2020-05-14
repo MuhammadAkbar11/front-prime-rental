@@ -2,6 +2,7 @@
 @import '../components/buttons';
 @import '../layout/best-cars';
 @import '../layout/service';
+@import '../layout/home.free_rental';
 @include media-breakpoint-down(md) {
 	.banner {
 		&__card {
