@@ -1,10 +1,11 @@
-section {
-	min-height: 450px !important;
-	padding-bottom: 5rem;
+.about {
+	.container-fluid {
+		border-radius: 15px !important;
+	}
 }
 
 @include media-breakpoint-down(sm) {
-	section {
+	.about {
 		.container-fluid {
 			border-radius: 0px !important;
 		}

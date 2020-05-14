@@ -1,7 +1,12 @@
+// const templatePath = '../../../../../templates/';
 import Swiper from 'swiper';
+import sliderContent from '../../../../../templates/Home_bestcars.slider.html';
+import InjectHtml from '../../../InjectHTML';
 
 export const sliderBestCar = () => {
-	var swiper = new Swiper('.swiper-container', {
+	new InjectHtml('.best-cars', sliderContent).inject();
+	// bestCarsSection.innerHTML = dataHtmlSlider;
+	const swiper = new Swiper('.swiper-container', {
 		direction: 'horizontal',
 		slidesPerView: 1,
 		spaceBetween: 10,

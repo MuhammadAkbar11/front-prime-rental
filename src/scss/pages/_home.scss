@@ -3,6 +3,7 @@
 @import '../layout/best-cars';
 @import '../layout/service';
 @import '../layout/home.free_rental';
+@import '../layout/home.about';
 @include media-breakpoint-down(md) {
 	.banner {
 		&__card {

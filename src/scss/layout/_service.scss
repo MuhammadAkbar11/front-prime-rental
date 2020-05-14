@@ -4,16 +4,6 @@
 	.container-fluid {
 		border-radius: 15px !important;
 	}
-	&__header {
-		display: flex !important;
-	}
-	&__border {
-		border: {
-			top: 4px solid $secondary;
-		}
-		height: 5px;
-		width: 100%;
-	}
 
 	&__card:hover {
 		display: flex;
@@ -26,6 +16,17 @@
 
 		.card-text {
 			color: $bg-public !important;
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.service {
+		.container-fluid {
+			padding: {
+				top: 2rem;
+			}
+			border-radius: 0px !important;
 		}
 	}
 }
