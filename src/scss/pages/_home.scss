@@ -1,5 +1,6 @@
 @import '../components/banner';
 @import '../components/buttons';
+@import '../layout/best-cars';
 @import '../layout/service';
 @include media-breakpoint-down(md) {
 	.banner {

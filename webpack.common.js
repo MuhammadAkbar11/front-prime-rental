@@ -4,7 +4,8 @@ module.exports = {
 		vendor: './src/vendors.js',
 	},
 	module: {
-		rules: [{
+		rules: [
+			{
 				test: /\.html$/,
 				use: ['html-loader'],
 			},
@@ -22,11 +23,10 @@ module.exports = {
 			{
 				test: /\.(eot|gif|otf|png|svg|ttf|woff)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
 				use: ['file-loader'],
-
 			},
 			{
 				test: /\.hbs$/,
-				loader: 'handlebars-loader'
+				loader: 'handlebars-loader',
 			},
 		],
 	},

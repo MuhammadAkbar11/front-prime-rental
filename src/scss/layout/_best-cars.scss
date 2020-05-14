@@ -1,0 +1,109 @@
+.best-cars {
+	position: relative;
+	.swiper {
+		&__nav {
+			// margin: 0 -20px;
+			position: absolute;
+			top: 50%;
+			z-index: 2;
+			text-shadow: 1px;
+
+			&-prev {
+				left: 0.45rem;
+			}
+			&-next {
+				right: 0.45rem;
+			}
+
+			&.swiper-button-disabled {
+				display: none !important;
+				cursor: default;
+				color: rgba($secondary, $alpha: 0.4) !important;
+			}
+		}
+
+		&-slide {
+			border-radius: 0px 0px 10px 10px !important;
+			// background-color: #f3f3f;
+			::before {
+				content: '';
+				background-color: $secondary;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				height: 0;
+				z-index: -1;
+				// height: 100%;
+				border-radius: 0px 0px 10px 10px !important;
+				transition: 0.1s all ease-in-out;
+				-webkit-clip-path: circle(28.4% at 93% 100%);
+				clip-path: circle(28.4% at 93% 100%);
+			}
+
+			.card__brand {
+				text-align: center;
+				color: $secondary;
+			}
+			.card__type {
+				font-weight: 800;
+				color: rgba(set-text-color($primary), $alpha: 1);
+			}
+
+			.card__price {
+				color: rgba($secondary, $alpha: 1);
+			}
+
+			.card__btn {
+				background-color: rgba(set-text-color($primary), $alpha: 1);
+				color: $primary;
+			}
+
+			&:hover {
+				// & {
+				// 	border-radius: 0px 0px 10px 10px !important;
+				// 	box-shadow: 0 0 2px 10px rgba($secondary, $alpha: 0.5);
+				// }
+
+				::before {
+					height: 77%;
+					-webkit-clip-path: circle(113.7% at 93% 100%);
+					clip-path: circle(113.7% at 93% 100%);
+					// -webkit-clip-path: circle(65% at 50% 84%);
+					// clip-path: circle(65% at 50% 84%);
+				}
+				.card__brand {
+					text-align: center;
+					color: $primary;
+				}
+				.card__type {
+					font-weight: 800;
+					color: rgba(set-text-color($secondary), $alpha: 0.75);
+				}
+
+				.card__price {
+					color: rgba($white, $alpha: 0.9);
+				}
+
+				.card__btn {
+					background-color: rgba(set-text-color($secondary), $alpha: 1);
+					color: rgba($secondary, $alpha: 1);
+				}
+			}
+
+			:hover {
+				.glide--card::before {
+					height: 50%;
+					background-color: yellow !important;
+				}
+			}
+		}
+
+		&--card {
+			border: none;
+			background-color: transparent !important;
+			position: relative;
+			text-align: center;
+		}
+	}
+}
