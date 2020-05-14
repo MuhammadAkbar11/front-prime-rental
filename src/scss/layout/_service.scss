@@ -1,4 +1,9 @@
 .service {
+	// background-color: $primary;
+
+	.container-fluid {
+		border-radius: 34px !important;
+	}
 	&__header {
 		display: flex !important;
 	}
@@ -13,9 +18,14 @@
 	&__card:hover {
 		display: flex;
 		align-items: stretch;
-		background-color: $secondary !important;
-		color: $primary !important;
+		background-color: $primary !important;
+		color: $secondary !important;
 		transition: 0.2s ease-in;
-		box-shadow: 0 -1px 20px 2px rgba($color: #000000, $alpha: 0.4);
+		box-shadow: 0 -1px 4px 2px rgba($color: #2e2e36, $alpha: 0.4);
+		border-radius: 0px 0px 9px rgba(0, 0, 0, 0.56);
+
+		.card-text {
+			color: $bg-public !important;
+		}
 	}
 }
