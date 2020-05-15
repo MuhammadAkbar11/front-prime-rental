@@ -20,9 +20,34 @@ module.exports = {
 					},
 				},
 			},
+			// {
+			// 	test: /\.(eot|gif|otf|png|jpe?g|svg|ttf|woff)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+			// 	// test: /\.(png|jpe?g|svg|gif)$/i,
+			// 	// use: ['file-loader'],
+			// 	loader: 'file-loader',
+			// 	options: {
+			// 		name: '[path][name].[ext]',
+			// 		// publicPath: '/assets/images/',
+			// 		// outputPath: '../images/',
+			// 	},
+			// },
 			{
-				test: /\.(eot|gif|otf|png|svg|ttf|woff)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-				use: ['file-loader'],
+				test: /\.(eot|gif|otf|png|jpe?g|svg|ttf|woff)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name(file) {
+								if (process.env.NODE_ENV === 'development') {
+									return '[name].[ext]';
+								}
+								return '[name].[ext]';
+							},
+							// publicPath: '/assets/images/',
+							outputPath: '../images/',
+						},
+					},
+				],
 			},
 			{
 				test: /\.hbs$/,

@@ -6,6 +6,25 @@ export const loadTestimContent = () => {
 	new InjectHtml('.testimonial', testimContent).inject();
 
 	new Swiper('.slider-testim', {
+		spaceBetween: 30,
+		loop: true,
+		loopFillGroupWithBlank: true,
+		slidesPerView: 1,
+		autoplay: {
+			delay: 3500,
+			disableOnInteraction: false,
+		},
+		effect: 'coverflow',
+		grabCursor: true,
+		centeredSlides: true,
+		// slidesPerView: 'auto',
+		coverflowEffect: {
+			rotate: 50,
+			stretch: 0,
+			depth: 100,
+			modifier: 1,
+			slideShadows: true,
+		},
 		navigation: {
 			nextEl: '.swiper__nav-next',
 			prevEl: '.swiper__nav-prev',

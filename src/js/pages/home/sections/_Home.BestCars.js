@@ -9,8 +9,15 @@ export const sliderBestCar = () => {
 	// bestCarsSection.innerHTML = dataHtmlSlider;
 	new Swiper('.swiper-container', {
 		direction: 'horizontal',
-		slidesPerView: 4,
-		spaceBetween: 10,
+		loop: true,
+		loopFillGroupWithBlank: true,
+		slidesPerView: 1,
+		centeredSlides: true,
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		},
+		spaceBetween: 20,
 		// init: false,
 		navigation: {
 			nextEl: '.swiper__nav-next',

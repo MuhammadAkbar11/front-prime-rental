@@ -25,15 +25,17 @@
 	}
 
 	&__card {
-		height: 340px !important;
+		height: 350px !important;
+		width: 100% !important;
 
 		&-img {
 			position: absolute;
 			border-radius: 10px;
 			left: -2rem;
-			top: 26%;
+			top: 40%;
 			width: 100%;
 			object-fit: cover;
+			box-shadow: 0 0 15px 3px rgba(#000, $alpha: 0.4);
 		}
 		// & > .col_card {
 		// 	// background-color: aqua !important;
