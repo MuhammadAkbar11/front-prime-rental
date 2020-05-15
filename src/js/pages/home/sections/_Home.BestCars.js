@@ -5,16 +5,13 @@ import InjectHtml from '../../../InjectHTML';
 
 export const sliderBestCar = () => {
 	new InjectHtml('.best-cars', sliderContent).inject();
+	console.log('ok');
 	// bestCarsSection.innerHTML = dataHtmlSlider;
-	const swiper = new Swiper('.swiper-container', {
+	new Swiper('.swiper-container', {
 		direction: 'horizontal',
-		slidesPerView: 1,
+		slidesPerView: 4,
 		spaceBetween: 10,
 		// init: false,
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true,
-		},
 		navigation: {
 			nextEl: '.swiper__nav-next',
 			prevEl: '.swiper__nav-prev',

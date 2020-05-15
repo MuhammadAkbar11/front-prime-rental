@@ -1,6 +1,7 @@
 .best-cars {
 	position: relative;
 	.swiper {
+		overflow: hidden;
 		&__nav {
 			// margin: 0 -20px;
 			position: absolute;
