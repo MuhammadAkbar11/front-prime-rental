@@ -1,5 +1,6 @@
 .best-cars {
 	position: relative;
+	overflow-x: hidden;
 	.swiper {
 		overflow: hidden;
 		&__nav {
