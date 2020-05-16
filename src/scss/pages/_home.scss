@@ -14,26 +14,6 @@
 	}
 }
 
-.swiper__nav {
-	// margin: 0 -20px;
-	position: absolute;
-	top: 40%;
-	z-index: 2;
-	text-shadow: 1px;
-
-	&-prev {
-		left: -2rem;
-	}
-	&-next {
-		right: -2rem;
-	}
-
-	&.swiper-button-disabled {
-		display: none !important;
-		cursor: default;
-		color: rgba($secondary, $alpha: 0.4) !important;
-	}
-}
 // @include media-breakpoint-down(sm) { ... }
 @include media-breakpoint-up(md) {
 	.jumbotron {

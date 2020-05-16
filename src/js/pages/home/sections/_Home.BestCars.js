@@ -1,6 +1,6 @@
 // const templatePath = '../../../../../templates/';
 import Swiper from 'swiper';
-import sliderContent from '../../../../../templates/Home_bestcars.slider.html';
+import sliderContent from '../../../../../templates/section_home/Home_bestcars.slider.html';
 import InjectHtml from '../../../InjectHTML';
 
 export const sliderBestCar = () => {

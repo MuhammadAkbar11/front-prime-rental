@@ -1,4 +1,4 @@
-import freeRentalContent from '../../../../../templates/Home_free.rental.html';
+import freeRentalContent from '../../../../../templates/section_home/Home_free.rental.html';
 import InjectHtml from '../../../InjectHTML';
 
 export const loadFreeRentalSection = () => {

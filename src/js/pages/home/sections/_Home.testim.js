@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import testimContent from '../../../../../templates/Home_testim.html';
+import testimContent from '../../../../../templates/section_home/Home_testim.html';
 import InjectHtml from '../../../InjectHTML';
 
 export const loadTestimContent = () => {
