@@ -32,7 +32,8 @@ module.exports = {
 			// 	},
 			// },
 			{
-				test: /\.(eot|gif|otf|png|jpe?g|svg|ttf|woff)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+				// test: /\.(svg|png|jp?eg|gif)$/,
+				test: /\.(gif|png|jpe?g|svg)$/i,
 				use: [
 					{
 						loader: 'file-loader',
@@ -43,12 +44,13 @@ module.exports = {
 								}
 								return '[name].[ext]';
 							},
-							// publicPath: '/assets/images/',
-							outputPath: '../images/',
+							// publicPath: '/img/',
+							// outputPath: '../images/',
 						},
 					},
 				],
 			},
+
 			{
 				test: /\.hbs$/,
 				loader: 'handlebars-loader',

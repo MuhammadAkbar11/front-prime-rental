@@ -25,16 +25,19 @@ module.exports = WebpackMerge(_common, {
 			{
 				test: /\.css$/,
 				exclude: /node_modules/,
-				use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
+				use: ['style-loader', 'css-loader', 'postcss-loader'],
 			},
 			{
 				test: /\.scss$/,
 				exclude: /node_modules/,
+				use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+			},
+			{
+				test: /\.(eot|gif|otf|ttf|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
 				use: [
-					MiniCssExtractPlugin.loader,
-					'css-loader',
-					'postcss-loader',
-					'sass-loader',
+					{
+						loader: 'file-loader',
+					},
 				],
 			},
 		],
@@ -45,9 +48,9 @@ module.exports = WebpackMerge(_common, {
 				postcss: [autoprefixer()],
 			},
 		}),
-		new MiniCssExtractPlugin({
-			filename: 'css/[name].css',
-		}),
+		// new MiniCssExtractPlugin({
+		// 	filename: 'css/[name].css',
+		// }),
 		new HtmlWebpackPlugin({
 			template: './templates/home.html',
 			templateParameters: _globals.title,

@@ -50,3 +50,18 @@
 		}
 	}
 }
+
+.btn--socialmedia {
+	margin-right: 0.2rem;
+	&:hover {
+		background-color: $primary;
+		color: $secondary !important;
+		text-decoration: none;
+	}
+
+	&:focus,
+	&.focus {
+		outline: 0;
+		box-shadow: $btn-focus-box-shadow;
+	}
+}
