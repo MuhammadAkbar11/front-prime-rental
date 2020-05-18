@@ -1,0 +1,83 @@
+{
+	"cars": [
+		{
+			"brand": "Toyota",
+			"price": "Rp 1.000.000",
+			"type": "MPV",
+			"image": "assets/dist/static/img/imgbanner.png"
+		},
+		{
+			"brand": "Datsun Go",
+			"price": "Rp 450.000",
+			"type": "Hatback",
+			"image": "assets/dist/static/img/datsun-go.png"
+		},
+		{
+			"brand": "Honda Brio",
+			"price": "Rp 300.000",
+			"type": "Hatback",
+			"image": "assets/dist/static/img/honda_brio.png"
+		},
+		{
+			"brand": "Toyota Calya",
+			"price": "Rp 450.000",
+			"type": "Hatback",
+			"image": "assets/dist/static/img/toyota-calya.png"
+		},
+		{
+			"brand": "Toyota Alphard ",
+			"price": "Rp 2.250.000",
+			"type": "Hatback",
+			"image": "assets/dist/static/img/ToyotaAlphard.png"
+		}
+	],
+	"freeCars": [
+		{
+			"brand": "Toyota",
+			"price": "Rp 1.000.000",
+			"type": "MPV",
+			"image": "assets/dist/static/img/imgbanner.png"
+		},
+		{
+			"brand": "Datsun Go",
+			"price": "Rp 450.000",
+			"type": "Hatback",
+			"image": "assets/dist/static/img/datsun-go.png"
+		},
+		{
+			"brand": "Honda Brio",
+			"price": "Rp 300.000",
+			"type": "Hatback",
+			"image": "assets/dist/static/img/honda_brio.png"
+		},
+		{
+			"brand": "Toyota Calya",
+			"price": "Rp 450.000",
+			"type": "Hatback",
+			"image": "assets/dist/static/img/toyota-calya.png"
+		},
+		{
+			"brand": "Toyota Alphard ",
+			"price": "Rp 2.250.000",
+			"type": "Hatback",
+			"image": "assets/dist/static/img/ToyotaAlphard.png"
+		}
+	],
+	"clients": [
+		{
+			"image": "assets/dist/static/img/clients/client1.jpg",
+			"name": "Carla Stevens",
+			"message": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis repellat, magnam nam hic et nulla qui, similique nisi quam impedit voluptate. Alias quam earum facilis, minus rerum iste nihil quaerat, eos sed reiciendis quia dignissimos ut distinctio quae temporibus! Expedita dolorem eum dignissimos quam neque doloribus sint illo quia voluptates?"
+		},
+		{
+			"image": "assets/dist/static/img/clients/client2.png",
+			"name": "Skylar",
+			"message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin fermentum dolor."
+		},
+		{
+			"image": "assets/dist/static/img/clients/client3.png",
+			"name": "John Doe",
+			"message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin fermentum dolor. Nunc nec augue urna. Cras varius orci vitae lacinia efficitur."
+		}
+	]
+}

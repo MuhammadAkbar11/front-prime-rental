@@ -31,30 +31,6 @@ module.exports = {
 			// 		// outputPath: '../images/',
 			// 	},
 			// },
-			{
-				// test: /\.(svg|png|jp?eg|gif)$/,
-				test: /\.(gif|png|jpe?g|svg)$/i,
-				use: [
-					{
-						loader: 'file-loader',
-						options: {
-							name(file) {
-								if (process.env.NODE_ENV === 'development') {
-									return '[name].[ext]';
-								}
-								return '[name].[ext]';
-							},
-							// publicPath: '/img/',
-							// outputPath: '../images/',
-						},
-					},
-				],
-			},
-
-			{
-				test: /\.hbs$/,
-				loader: 'handlebars-loader',
-			},
 		],
 	},
 };

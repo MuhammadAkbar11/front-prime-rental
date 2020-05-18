@@ -1,12 +1,6 @@
-import dataSidebar from '../../../templates/components/sidebar.html';
-
-import InjectHtml from '../InjectHTML';
 import { menuTriggerSidebar, menuTriggerSidebarMobile } from './menuBurger';
 
-export const loadDataSidebar = () => {
-	new InjectHtml('.sidebar', dataSidebar).inject();
-
-	const sidebar = document.querySelector('.sidebar');
+export const sidebar = () => {
 	const btnTrigger = document.querySelector('.menu-btn');
 
 	const btnTriggerMobile = document.querySelector('.btn--trigersidebar');

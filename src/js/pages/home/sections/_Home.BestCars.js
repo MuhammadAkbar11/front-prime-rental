@@ -1,13 +1,10 @@
 // const templatePath = '../../../../../templates/';
 import Swiper from 'swiper';
-import sliderContent from '../../../../../templates/section_home/Home_bestcars.slider.html';
-import InjectHtml from '../../../InjectHTML';
 
 export const sliderBestCar = () => {
-	new InjectHtml('.best-cars', sliderContent).inject();
-	console.log('ok');
 	// bestCarsSection.innerHTML = dataHtmlSlider;
-	new Swiper('.swiper-container', {
+
+	new Swiper('.slider-cars ', {
 		direction: 'horizontal',
 		loop: true,
 		loopFillGroupWithBlank: true,
@@ -38,7 +35,7 @@ export const sliderBestCar = () => {
 			},
 			1024: {
 				slidesPerView: 4,
-				spaceBetween: 20,
+				spaceBetween: 30,
 			},
 		},
 	});

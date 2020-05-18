@@ -1,0 +1,42 @@
+<section class="testimonial pb-6">
+
+
+    <div class="container-fluid pb-10">
+        <div class="row pb-5 ">
+            <div class="col-12 my-4 pt-md-5 text-center">
+                <span style="font-weight: 600;" class=" bg-secondary rounded-sm font-5 font-md-9 px-2 text-primary">
+                    Testi</span>
+                <span class="text-white font-5 font-md-9 text-secondary ">monial</span>
+            </div>
+        </div>
+        <!-- row cards -->
+        <div class="row pt-md-5 px-4 d-flex testimonial__content ">
+            <div class="col-md-8 col-lg-6 mx-auto my-auto">
+                <!-- Swiper -->
+                <div class="swiper-container slider-testim ">
+                    <div class="swiper-wrapper pb-3 mb-4 h-100">
+                        {{#each clients as |client| }}
+                        <div class="swiper-slide px-md-9  my-auto  ">
+                            {{> ../components/card-testim image=client.image message=client.message name=client.name }}
+                        </div>
+                        {{/each}}
+
+                    </div>
+                    <br>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <a href="#" class=" text-secondary swiper__nav swiper__nav-prev p-1 ">
+                    <i class="fas fa-angle-left fa-3x"></i>
+                </a>
+                <a href="#" class="text-secondary  swiper__nav swiper__nav-next  p-1 mr-md-5 ">
+                    <i class="fas fa-angle-right fa-3x"></i>
+                </a>
+
+            </div>
+            <div class="d-none d-md-flex col-md-4 col-lg-6 my-auto">
+                <img class="  img-fluid" src="assets/dist/static/svg/testim.svg" alt="">
+            </div>
+        </div>
+
+    </div>
+</section>

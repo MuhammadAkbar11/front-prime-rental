@@ -1,0 +1,39 @@
+<section class="best-cars pt-10 pb-10 ">
+    <div class="container-fluid pb-10">
+        <div class="row">
+            <div class="col-12 font-6 mb-6 py-5 text-center">
+                <span class="text-white  font-md-9 text-secondary ">Mobil</span>
+                <span style="font-weight: 600;" class=" bg-secondary rounded-sm font-md-9 px-2 text-primary">
+                    Terbaik</span>
+            </div>
+        </div>
+
+        <div class="row justify-content-center ">
+            <div class="col-11 col-lg-11 mx-auto  ">
+                <!-- Swiper -->
+                <div class="swiper-container  slider-cars swiper position-relative mx-auto px-3 w-100">
+                    <div class="swiper-wrapper">
+
+                        {{#each cars as |car| }}
+                        <div class="swiper-slide ">
+                            {{> ../components/card  className="swiper--card" image=car.image brand=car.brand price=car.price type=car.type  }}
+                        </div>
+                        {{/each}}
+
+                    </div>
+                    <!-- Add Arrows -->
+
+                </div>
+                <a href="#" class=" text-secondary swiper__nav swiper__nav-prev p-1 ">
+                    <i class="fas fa-angle-left fa-3x"></i>
+                </a>
+                <a href="#" class=" text-secondary  swiper__nav swiper__nav-next  p-1 ">
+                    <i class="fas fa-angle-right fa-3x"></i>
+                </a>
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
