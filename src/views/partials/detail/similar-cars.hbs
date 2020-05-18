@@ -1,0 +1,32 @@
+<section class="similar-car  pt-5">
+    <div class="container ">
+        <div class="row ">
+            <div class="col-md-12 ml-auto my-4 pt-md-5 text-center text-md-left pr-4">
+                <span class="text-white font-5  font-md-6 text-secondary ">MOBIL YANG</span>
+                <span style="font-weight: 600;" class=" bg-secondary-70 rounded-sm font-5  font-md-6 px-2 text-primary">
+                    SERUPA</span>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center align-content-center   ">
+            <div class="col-12 my-auto">
+                <!-- Swiper -->
+                <div class="swiper-container  similar-cars position-relative mx-auto px-3 w-100">
+                    <div class="swiper-wrapper d-flex align-items-stretch">
+                        {{#each cars as |car| }}
+                        <div class="swiper-slide pt-2  ">
+                            {{> ../components/card  className="swiper--card" image=car.image brand=car.brand price=car.price type=car.type  }}
+                        </div>
+                        {{/each}}
+                    </div>
+                    <!-- Add Arrows -->
+                </div>
+                <a href="#" class=" text-secondary swiper__nav swiper__nav-prev p-1 ">
+                    <i class="fas fa-angle-left fa-3x"></i>
+                </a>
+                <a href="#" class=" text-secondary  swiper__nav swiper__nav-next  p-1 ">
+                    <i class="fas fa-angle-right fa-3x"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

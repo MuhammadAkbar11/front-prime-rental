@@ -11,10 +11,10 @@
 @import './layout/section';
 
 @import './components/_Components';
-@import './components/_footer';
 
 // pages
 @import './pages/home';
+@import './pages/detail';
 
 body {
 	font-family: $montSerrat;

@@ -32,16 +32,7 @@ module.exports = WebpackMerge(_common, {
 		new MiniCssExtractPlugin({
 			filename: 'css/[name].css',
 		}),
-		// new webpack.LoaderOptionsPlugin({
-		// 	options: {
 
-		// 	},
-		// }),
-		// new HtmlWebpackPlugin({
-		// 	template: './templates/home.html',
-		// 	filename: 'home.html',
-		// 	templateParameters: _globals.title,
-		// }),
 		new CopyPlugin({
 			patterns: [
 				{ from: 'src/img', to: 'assets/dist/static/img' },
@@ -52,6 +43,12 @@ module.exports = WebpackMerge(_common, {
 			title: 'PrimeRental | Home',
 			template: './src/views/home.hbs',
 			filename: 'index.html',
+			templateParameters: _data,
+		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Detail',
+			template: './src/views/detail.hbs',
+			filename: 'detail.html',
 			templateParameters: _data,
 		}),
 	],

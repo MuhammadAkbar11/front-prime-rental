@@ -1,0 +1,60 @@
+{{> partials/components/header title=htmlWebpackPlugin.options.title}}
+
+{{> partials/components/navbar_mobile}}
+{{> partials/components/_sidebar status=""}}
+
+<div class="main-content px-sm-4 pb-6">
+    {{> ./partials/components/_navbar_top className="navbar-dark" classMenu="menu-btn  menu-btn-light" classlink=" text-primary "}}
+    <div class="container-fluid  ">
+        <div class="row pt-4">
+            <div class="col-md-7 py-4 ">
+                <img class=" img-fluid py-4 " src="assets/dist/static/img/honda_brio.png" alt="">
+                <div class="d-flex  align-content-between nav-social  ">
+                    <a href="#" class="btn btn-secondary text-primary "><i class="fab fa-2x fa-facebook-f"></i></a>
+                    <a href="#" class="btn btn-secondary text-primary ml-2"><i class="fab fa-2x  fa-instagram"></i></a>
+                    <a href="#" class="btn btn-secondary text-primary ml-2"><i class="fab fa-2x  fa-twitter"></i></a>
+                    <a href="#" class="btn btn-secondary text-primary ml-2"><i class="fal fa-2x  fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <nav aria-label="breadcrumb ">
+                    <ol class="breadcrumb bg-transparent pl-0">
+                        <li class="breadcrumb-item "><a href="#">Home</a></li>
+                        <li class="breadcrumb-item text-primary-70 ">Detail</li>
+                        <li class="breadcrumb-item active" aria-current="page">Datsun Go</li>
+                    </ol>
+                </nav>
+
+                <h1 class=" font-md-8 text-primary ">Datsun GO</h1>
+                <div class="d-flex font-26px text-primary mt-2">
+                    <i class="fas fa-star fa-fw"></i>
+                    <i class="fas fa-star fa-fw ml-1"></i>
+                    <i class="fas fa-star fa-fw ml-1"></i>
+                    <i class="fas fa-star-half-alt fa-fw ml-1"></i>
+                    <i class="far fa-star fa-fw ml-1"></i>
+                </div>
+                <h5 class=" font-25px mt-md-2 text-white font-italic ">Hatback</h5>
+                <h5 class=" font-25px mt-md-2 text-primary ">Rp. 300.000 / hari</h5>
+                <p class="mt-md-2 text-white-50">
+                    Hatchback baru dari Datsun, GO hadir dengan 9 varian. Varian teratas GO, Live CVT 1198 cc, mesin
+                    Bensin 3 silinder menghasilkan tenaga 77 hp dan Torsi 104 Nm. CVT 5 kursi GO Live memiliki transmisi
+                    CVT Variabel Kecepatan. Central Locking & Power Door Locks menambah keamanan mobil.
+                </p>
+                <div class="d-flex mt-2 ">
+                    <span class="badge badge-pill badge-primary font-18px text-secondary shadow-sm">5 Kursi</span>
+                    <span class="badge badge-pill badge-primary font-18px text-secondary shadow-sm ml-2">Otomatis</span>
+                    <span class="badge badge-pill badge-primary font-18px text-secondary shadow-sm ml-2">Bensin</span>
+                </div>
+                <a href="#" class="btn btn-outline-primary mt-3 font-18px rounded-pill py-1 px-3">Sewa
+                    sekarang</a>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+{{> partials/detail/similar-cars cars=cars }}
+{{> partials/components/footer }}
+{{> partials/components/_end }}

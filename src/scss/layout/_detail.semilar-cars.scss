@@ -1,0 +1,130 @@
+.similar-car {
+	min-height: 300px !important;
+	background-color: rgba($white, $alpha: 1);
+
+	.swiper {
+		overflow: hidden;
+		&__nav {
+			// margin: 0 -20px;
+			position: absolute;
+			top: 40%;
+			z-index: 2;
+			text-shadow: 1px;
+
+			&-prev {
+				left: -2.45rem;
+			}
+			&-next {
+				right: -2.45rem;
+			}
+
+			&.swiper-button-disabled {
+				display: none !important;
+				cursor: default;
+				color: rgba($secondary, $alpha: 0.4) !important;
+			}
+		}
+
+		&-slide {
+			margin: {
+				top: 2rem;
+				bottom: 2rem;
+			}
+			border-radius: 10px 10px 10px 10px !important;
+
+			display: flex;
+			align-items: stretch !important;
+			height: 100%;
+			::before {
+				content: '';
+				background-color: $secondary;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				height: 0;
+				z-index: -1;
+				// height: 100%;
+				border-radius: 0px 0px 10px 10px !important;
+				transition: 0.1s all ease-in-out;
+				-webkit-clip-path: circle(21.8% at 49% 100%);
+				clip-path: circle(21.8% at 49% 100%);
+			}
+
+			.card__brand {
+				text-align: center;
+				color: rgba($secondary, $alpha: 1);
+			}
+			.card__type {
+				font-weight: 800;
+				color: rgba(set-text-color($primary), $alpha: 1);
+			}
+
+			.card__price {
+				color: rgba($secondary, $alpha: 1);
+			}
+
+			.card__btn {
+				background-color: rgba(set-text-color($primary), $alpha: 1);
+				color: $primary;
+			}
+
+			&:hover {
+				box-shadow: 0 0 0.2rem rgba($secondary, $alpha: 0.4);
+				::before {
+					height: 100%;
+					-webkit-clip-path: circle(67.9% at 53% 98%);
+					clip-path: circle(67.9% at 53% 98%);
+				}
+				.card__brand {
+					text-align: center;
+					color: $primary;
+				}
+				.card__type {
+					font-weight: 800;
+					color: rgba(set-text-color($secondary), $alpha: 0.75);
+				}
+
+				.card__price {
+					color: rgba($white, $alpha: 0.9);
+				}
+
+				.card__btn {
+					background-color: rgba(set-text-color($secondary), $alpha: 1);
+					color: rgba($secondary, $alpha: 1);
+				}
+			}
+		}
+
+		&--card {
+			display: flex;
+			align-items: stretch !important;
+			border: none;
+			background-color: transparent !important;
+			position: relative;
+			text-align: center;
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.similar-car {
+		padding: {
+			top: 10rem !important;
+		}
+		min-height: 300px !important;
+		background-color: lighten($secondary, $amount: 100);
+
+		.swiper {
+			overflow: hidden;
+			&__nav {
+				&-prev {
+					left: 0rem;
+				}
+				&-next {
+					right: 0rem;
+				}
+			}
+		}
+	}
+}
