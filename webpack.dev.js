@@ -8,6 +8,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 
+const Handlebars = require('handlebars');
+
 const _data = require('./src/cars.json');
 
 module.exports = WebpackMerge(_common, {
@@ -29,9 +31,9 @@ module.exports = WebpackMerge(_common, {
 				postcss: [autoprefixer()],
 			},
 		}),
-		new MiniCssExtractPlugin({
-			filename: 'css/[name].css',
-		}),
+		// new MiniCssExtractPlugin({
+		// 	filename: 'css/[name].css',
+		// }),
 
 		new CopyPlugin({
 			patterns: [
@@ -51,12 +53,25 @@ module.exports = WebpackMerge(_common, {
 			filename: 'detail.html',
 			templateParameters: _data,
 		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Login',
+			template: './src/views/login.hbs',
+			filename: 'login.html',
+			templateParameters: _data,
+		}),
 	],
 
 	module: {
 		rules: [
-			{ test: /\.hbs$/, loader: 'handlebars-loader' },
-			// {
+			{
+				test: /\.hbs$/,
+				use: [
+					{
+						loader: 'handlebars-loader',
+					},
+				],
+			},
+
 			{
 				test: /\.css$/,
 				exclude: /node_modules/,
@@ -66,15 +81,43 @@ module.exports = WebpackMerge(_common, {
 				test: /\.scss$/,
 				exclude: /node_modules/,
 				use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+				// use: [
+				// 	{
+				// 		loader: 'style-loader',
+				// 	},
+				// 	{
+				// 		loader: 'css-loader',
+				// 	},
+				// 	{
+				// 		loader: 'resolve-url-loader',
+				// 		// options: {
+				// 		// 	debug: true,
+				// 		// 	root: path.join(__dirname, './src'),
+				// 		// 	includeRoot: true,
+				// 		// },
+				// 	},
+				// 	{
+				// 		loader: 'postcss-loader',
+				// 	},
+				// 	{
+				// 		loader: 'sass-loader',
+				// 		options: {
+				// 			sourceMap: true,
+				// 		},
+				// 	},
+				// ],
 			},
 			{
 				// test: /\.(jpg|JPG|jpeg|png|svg)$/i,
-				test: /\.(png|jpe?g|gif|svg)$/i,
-				// include: [path.resolve(__dirname, 'src/')],
+				test: /\.(png|jpe?g|gif|svg)$/,
+				include: [path.resolve(__dirname, 'src/')],
 				use: {
 					loader: 'file-loader',
 					options: {
-						name: '[name].[ext]',
+						sourceMap: true,
+						name: '[path][name].[ext]',
+						// context: path.resolve(__dirname, 'src'),
+						include: path.join(__dirname, 'src'),
 					},
 				},
 			},
@@ -83,6 +126,9 @@ module.exports = WebpackMerge(_common, {
 				use: [
 					{
 						loader: 'file-loader',
+						options: {
+							include: path.join(__dirname, 'src'),
+						},
 					},
 				],
 			},

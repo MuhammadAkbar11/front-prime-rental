@@ -1,4 +1,4 @@
-.main-content {
+.detail-content {
 	height: max-content;
 	background-color: none;
 	position: relative;
@@ -31,7 +31,7 @@
 @import '../layout/detail.semilar-cars';
 
 @include media-breakpoint-down(sm) {
-	.main-content {
+	.detail-content {
 		// background-color: $secondary;
 		padding: {
 			left: 1.45rem;

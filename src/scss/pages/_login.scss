@@ -1,0 +1,108 @@
+.login {
+	overflow-x: hidden;
+
+	&-content {
+		overflow: hidden;
+		height: 100vh;
+		width: 100%;
+		position: relative;
+		background-color: $bg-public;
+
+		.bubble {
+			background-color: rgba($primary, $alpha: 0.6);
+
+			content: '';
+			position: absolute;
+			right: -6rem;
+
+			border-radius: 50%;
+			bottom: -5rem;
+			width: 325px;
+			height: 312px;
+			z-index: 1;
+		}
+		.bubble-2 {
+			background-color: rgba($primary, $alpha: 0.8);
+			content: '';
+			position: absolute;
+			left: -5rem;
+			top: -20rem;
+			border-radius: 50%;
+			width: 766px;
+			height: 766px;
+			z-index: 1;
+		}
+	}
+
+	&-container {
+		height: 100%;
+		z-index: 5;
+	}
+
+	&-card {
+		height: 100%;
+		z-index: 5;
+		background-color: $white;
+	}
+
+	.login-cover {
+		position: relative;
+		overflow: hidden;
+
+		// background-image: url(assets/dist/static/img/bg/bg-login.png);
+		background-position: left top;
+		background-size: cover;
+		object-fit: cover;
+		background-repeat: no-repeat;
+		z-index: -1;
+	}
+
+	&-submit {
+		box-shadow: -2 0 1rem rgba($secondary, $alpha: 0.6);
+		padding: {
+			top: 0.75rem;
+			bottom: 0.75rem;
+		}
+	}
+
+	&-group-input {
+		border-radius: 40px;
+		border: 2px solid rgba($secondary, $alpha: 1);
+	}
+
+	&-input {
+		border: 0;
+		&:active,
+		&:focus {
+			border: 0px solid $secondary !important;
+			box-shadow: none !important;
+		}
+		&::placeholder {
+			color: rgba($secondary, $alpha: 1) !important;
+			margin: {
+				left: -1rem;
+			}
+		}
+	}
+
+	&-cover-content {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		z-index: 5 !important;
+	}
+
+	// &-cover-overlay {
+	// 	content: '';
+	// 	position: absolute;
+	// 	left: 0;
+	// 	right: 0;
+	// 	top: 0;
+	// 	bottom: 0;
+	// 	width: 100%;
+	// 	background-color: rgba($bg-public, $alpha: 0.7);
+	// 	z-index: 2;
+	// }
+}
