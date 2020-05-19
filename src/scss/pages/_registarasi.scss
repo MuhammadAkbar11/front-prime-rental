@@ -1,9 +1,9 @@
-.login {
+.registrasi {
 	overflow-x: hidden;
 
 	&-content {
 		overflow: hidden;
-		height: 100vh;
+		height: 110vh;
 		width: 100%;
 		position: relative;
 		background-color: $bg-public;
@@ -45,13 +45,13 @@
 		background-color: $white;
 	}
 
-	.login-cover {
+	.registrasi-cover {
 		position: relative;
 		overflow: hidden;
 
 		// background-image: url(assets/dist/static/img/bg/bg-login.png);
-		background-position: left top;
-		background-size: cover;
+		background-position: center;
+		background-size: 90%;
 		object-fit: cover;
 		background-repeat: no-repeat;
 		z-index: -1;
@@ -60,12 +60,16 @@
 	&-submit {
 		box-shadow: -2 0 1rem rgba($secondary, $alpha: 0.6);
 		padding: {
-			top: 0.75rem;
-			bottom: 0.75rem;
+			top: 0.6rem;
+			bottom: 0.6rem;
 		}
 	}
 
 	&-group-input {
+		padding: {
+			top: 0.15rem;
+			bottom: 0.15rem;
+		}
 		border-radius: 40px;
 		border: 2px solid rgba($secondary, $alpha: 1);
 	}
@@ -79,6 +83,7 @@
 		}
 		&::placeholder {
 			color: rgba($secondary, $alpha: 1) !important;
+			font-size: 15px;
 			margin: {
 				left: -1rem;
 			}

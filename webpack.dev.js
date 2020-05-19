@@ -59,6 +59,12 @@ module.exports = WebpackMerge(_common, {
 			filename: 'login.html',
 			templateParameters: _data,
 		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Registrasi',
+			template: './src/views/registrasi.hbs',
+			filename: 'registrasi.html',
+			templateParameters: _data,
+		}),
 	],
 
 	module: {
@@ -81,31 +87,6 @@ module.exports = WebpackMerge(_common, {
 				test: /\.scss$/,
 				exclude: /node_modules/,
 				use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
-				// use: [
-				// 	{
-				// 		loader: 'style-loader',
-				// 	},
-				// 	{
-				// 		loader: 'css-loader',
-				// 	},
-				// 	{
-				// 		loader: 'resolve-url-loader',
-				// 		// options: {
-				// 		// 	debug: true,
-				// 		// 	root: path.join(__dirname, './src'),
-				// 		// 	includeRoot: true,
-				// 		// },
-				// 	},
-				// 	{
-				// 		loader: 'postcss-loader',
-				// 	},
-				// 	{
-				// 		loader: 'sass-loader',
-				// 		options: {
-				// 			sourceMap: true,
-				// 		},
-				// 	},
-				// ],
 			},
 			{
 				// test: /\.(jpg|JPG|jpeg|png|svg)$/i,
