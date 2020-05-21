@@ -1,0 +1,55 @@
+.contact {
+	&-content {
+		height: max-content;
+		padding: {
+			top: 30px;
+		}
+		background-color: $secondary;
+	}
+
+	&-banner {
+		min-height: 100vh;
+		width: 100%;
+		padding: {
+			bottom: 5rem !important;
+		}
+
+		&-content {
+			height: 100%;
+		}
+	}
+
+	&-title {
+		background-color: $secondary;
+		min-height: 400px;
+	}
+
+	&-form-card {
+		border-radius: 9px 9px 9px 9px;
+	}
+
+	&-col {
+		margin-top: -10.45rem;
+	}
+
+	&-input {
+		background-color: rgba(61, 59, 59, 0.17) !important;
+		$py: 1rem;
+		padding: {
+			top: $py !important;
+			bottom: $py !important;
+		}
+		color: $secondary !important;
+		&::placeholder {
+			color: rgba($secondary, $alpha: 0.9) !important;
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.contact {
+		&-col {
+			margin-top: -15rem;
+		}
+	}
+}

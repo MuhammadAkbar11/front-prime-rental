@@ -1,0 +1,83 @@
+{{> partials/components/header title=htmlWebpackPlugin.options.title}}
+
+{{> partials/components/navbar_mobile}}
+{{> partials/components/_sidebar status=""}}
+
+
+<div class="contact-content ">
+    <section class="contact-banner px-3">
+        {{> ./partials/components/_navbar_top className="navbar-dark" classMenu="menu-btn menu-btn-light" classlink=" text-primary "}}
+        {{> ./partials/contact/_banner }}
+    </section>
+
+    <section class="contact-main bg-white ">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 py-5 contact-title text-center ">
+                    <h1 class=" text-primary font-30px font-md-55px font-weight-bold ">Punya Pertanyaan ?</h1>
+                </div>
+                <div class="col-md-10 mx-auto contact-col px-4 ">
+                    <div class="card shadow-sm border-0 p-0 ">
+                        <div class="card-body p-0 ">
+                            <div class="row  p-0  shadow-sm ">
+                                <div class="col-md-7 pt-4 pb-4 px-5 bg-white">
+                                    <h3 class=" text-secondary font-weight-bold ">Hubungin kami</h3>
+                                    <p class=" text-secondary mt-n2 ">Punya pertayaan ?, kirim pesan anda </p>
+                                    <br><br>
+                                    <div class="col-md-11 mx-auto">
+                                        <form action="">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-lg contact-input "
+                                                    placeholder="Name">
+                                            </div>
+                                            <div class="form-group mt-3">
+                                                <input type="text" class="form-control form-control-lg contact-input "
+                                                    placeholder="Email">
+                                            </div>
+                                            <div class="form-group mt-3">
+                                                <textarea class="form-control form-control-lg contact-input "
+                                                    id="exampleFormControlTextarea1" rows="3"
+                                                    placeholder="Pesan Anda"></textarea>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 bg-secondary-70 pt-4 pb-4 px-5">
+                                    <h3 class=" text-white  ">Informasi Kontak</h3>
+                                    <br><br>
+                                    <div class=" d-flex flex-column justify-content-center align-content-center pt-3 ">
+                                        <div class=" d-flex align-content-center mb-2 ">
+                                            <i class="fad fa-map-marked-alt fa-2x "></i>
+                                            <p class=" text-white ml-2 ">
+                                                Jl. Raya Jatiwaringin RT.005/RW.002, Jatiwaringin Kec. Pondokgede Kota
+                                                Bks
+                                                Jawa Barat 17411
+                                            </p>
+                                        </div>
+                                        <div class=" d-flex align-content-center ">
+                                            <i class="fad fa-phone fa-2x "></i>
+                                            <p class=" text-white ml-2 my-auto">
+                                                +62-852-5433-8100
+                                            </p>
+                                        </div>
+                                        <div class=" d-flex align-content-center mt-4 ">
+                                            <i class="fad fa-envelope-open-text fa-2x "></i>
+                                            <p class=" text-white ml-2 my-auto">
+                                                Wahidin@gmail.com
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+{{> partials/components/footer }}
+{{> partials/components/_end }}

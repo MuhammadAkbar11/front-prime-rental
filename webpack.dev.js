@@ -71,6 +71,12 @@ module.exports = WebpackMerge(_common, {
 			filename: 'registrasi.html',
 			templateParameters: _data,
 		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Kontak Kami',
+			template: './src/views/contact.hbs',
+			filename: 'contact.html',
+			templateParameters: _data,
+		}),
 	],
 
 	module: {
