@@ -1,0 +1,86 @@
+.about {
+	&-content {
+		height: max-content;
+		padding: {
+			top: 30px;
+		}
+		background-color: $secondary;
+	}
+
+	&-banner {
+		min-height: 100vh;
+		width: 100%;
+		padding: {
+			bottom: 5rem !important;
+		}
+
+		&-content {
+			height: 100%;
+		}
+	}
+	&-main {
+		padding: {
+			top: 5rem;
+			bottom: 5rem;
+		}
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		.container-fluid {
+			height: 100% !important;
+		}
+	}
+
+	&-our-values {
+		position: relative;
+		background-color: white;
+
+		&::before {
+			background-color: $bg-public;
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			top: 0;
+			height: 100%;
+			width: 45%;
+		}
+
+		// .values-img-left {
+		// 	width: auto !important;
+		// 	height: 200px !important;
+		// }
+	}
+
+	&-team {
+		.swiper--ourteams {
+			position: relative;
+			&::before {
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 50%;
+				background-color: #3d426c;
+				width: 100%;
+			}
+		}
+
+		// .our--team--card {
+		// 	// width: 270px !important;
+		// 	// min-height: 236px;
+		// }
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.about {
+		&-our-values {
+			&::before {
+				display: none;
+			}
+		}
+	}
+}

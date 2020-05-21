@@ -8,6 +8,7 @@ export const loadTestimContent = () => {
 		loop: true,
 		autoHeight: true,
 		effect: 'flip',
+		grabCursor: false,
 		autoplay: {
 			delay: 4500,
 			disableOnInteraction: false,

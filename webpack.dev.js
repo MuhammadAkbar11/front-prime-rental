@@ -54,6 +54,12 @@ module.exports = WebpackMerge(_common, {
 			templateParameters: _data,
 		}),
 		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Tentang Kami',
+			template: './src/views/about.hbs',
+			filename: 'about.html',
+			templateParameters: _data,
+		}),
+		new HtmlWebpackPlugin({
 			title: 'PrimeRental | Login',
 			template: './src/views/login.hbs',
 			filename: 'login.html',
