@@ -8,7 +8,7 @@ import bgRegistrasi from './img/bg/bg-registrasi.png';
 import { loginPage } from './js/pages/auth/login.page';
 import { registrasiPage } from './js/pages/auth/registrasi.page';
 import { loadAboutPage } from './js/pages/about/about.page';
-import { loadContactPage } from './js/pages/contact/contact.page';
+import { loadListCars } from './js/pages/list-cars/list-cars.page';
 
 document.addEventListener('DOMContentLoaded', () => {
 	loadHomePage();
@@ -16,5 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	loginPage(image);
 	registrasiPage(bgRegistrasi);
 	loadAboutPage();
-	loadContactPage();
+	loadListCars();
 });

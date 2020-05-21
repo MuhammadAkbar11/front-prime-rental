@@ -1,0 +1,19 @@
+{{> partials/components/header title=htmlWebpackPlugin.options.title}}
+
+{{> partials/components/navbar_mobile}}
+{{> partials/components/_sidebar status=""}}
+
+
+<div class="listcars-content">
+    <section class="listcars-banner px-3">
+        {{> ./partials/components/_navbar_top className="navbar-dark" classMenu="menu-btn menu-btn-light" classlink=" text-primary "}}
+        {{> ./partials/list-cars/_banner }}
+    </section>
+
+    <section class="listcars-main bg-light">
+        {{> ./partials/list-cars/_main cars=cars }}
+    </section>
+</div>
+
+{{> partials/components/footer }}
+{{> partials/components/_end }}

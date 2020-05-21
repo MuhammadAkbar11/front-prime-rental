@@ -35,6 +35,11 @@ module.exports = WebpackMerge(_common, {
 		// 	filename: 'css/[name].css',
 		// }),
 
+		new webpack.ProvidePlugin({
+			$: 'jquery',
+			jQuery: 'jquery',
+		}),
+
 		new CopyPlugin({
 			patterns: [
 				{ from: 'src/img', to: 'assets/dist/static/img' },
@@ -75,6 +80,12 @@ module.exports = WebpackMerge(_common, {
 			title: 'PrimeRental | Kontak Kami',
 			template: './src/views/contact.hbs',
 			filename: 'contact.html',
+			templateParameters: _data,
+		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Mobil Kami',
+			template: './src/views/list-cars.hbs',
+			filename: 'list-cars.html',
 			templateParameters: _data,
 		}),
 	],

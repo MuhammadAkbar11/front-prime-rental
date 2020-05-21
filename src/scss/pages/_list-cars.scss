@@ -1,0 +1,134 @@
+.listcars {
+	&-content {
+		height: max-content;
+		padding: {
+			top: 30px;
+		}
+		background-color: $secondary;
+	}
+
+	&-banner {
+		min-height: 50vh;
+		width: 100%;
+		padding: {
+			bottom: 3rem !important;
+		}
+
+		&-content {
+			height: 100%;
+		}
+	}
+
+	&-container {
+		padding: {
+			top: 5rem;
+		}
+	}
+
+	&-sidenav {
+		$nav-link-color: #3d3b3b;
+
+		.nav {
+			&-filter {
+				margin: {
+					top: 2.5rem;
+					left: -0.8rem;
+				}
+			}
+			&-item {
+				hr {
+					margin: {
+						top: -2px;
+					}
+					width: 90%;
+					border: {
+						bottom: 1px solid rgba($nav-link-color, $alpha: 0.6);
+					}
+				}
+			}
+			&-link {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-direction: row;
+				font-size: 20px !important;
+				color: $nav-link-color !important;
+				font-weight: 500;
+
+				&:hover,
+				&.active {
+					transition: 0.2s ease-in-out;
+
+					i,
+					span {
+						transition: 0.2s ease-in-out;
+						color: rgba($color: #5b66c3, $alpha: 1);
+						// color: rgba($secondary, $alpha: 1);
+					}
+				}
+
+				i {
+					font-weight: 700 !important;
+					color: rgba($secondary, $alpha: 1);
+				}
+			}
+
+			// collapse
+			&-collapse {
+				.nav {
+					&-link {
+						font-size: 17px !important;
+						&:hover,
+						&.active {
+							margin-left: 3px;
+							span {
+								transition: 0.4s all;
+								color: rgba($color: #5b66c3, $alpha: 1);
+								// color: rgba($secondary, $alpha: 1);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&-search {
+		border: {
+			bottom: 2px solid rgba($secondary, $alpha: 1);
+		}
+	}
+
+	&-input-search {
+		border: 0;
+		&:active,
+		&:focus {
+			border: 0px solid $secondary !important;
+			box-shadow: none !important;
+		}
+		&::placeholder {
+			color: rgba($secondary, $alpha: 1) !important;
+			margin: {
+				left: -1rem;
+			}
+		}
+	}
+}
+
+.car {
+	&-card {
+		box-shadow: 0px 3px 0.25rem rgba(34, 38, 76, 0.53) !important;
+	}
+
+	&-devider {
+		left: 0;
+		margin: {
+			top: -1px;
+			left: 0px;
+		}
+		width: 100px;
+		border: {
+			top: 2px solid $secondary;
+		}
+	}
+}

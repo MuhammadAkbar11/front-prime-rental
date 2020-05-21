@@ -1,0 +1,52 @@
+{{#each cars as |car| }}
+<div class="col-12 mt-3">
+    <div class="card bg-light px-2 pb-0 border-0 car-card ">
+        <div class="row no-gutters pb-0">
+            <div class="col-md-4 my-auto">
+                <img src="{{car.image}}" class="card-img " alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body pr-2 pl-5">
+                    <h3 class="card-title font-weight-bold text-secondary">{{ car.brand}}</h3>
+                    <hr class="car-devider">
+                    <div class="row mt-2 no-gutters pb-0">
+                        <div class="col-md-6 pb-0 mb-3 mb-md-0 ">
+                            <div class="row pb-0">
+                                <p
+                                    class="col-6 col-md-12  d-flex flex-grow-1 justify-content-start align-content-center ">
+                                    <i class=" fad fa-ruler-horizontal font-18px fa-fw "></i>
+                                    <span class=" my-auto ml-1">AC 4546 BE</span>
+                                </p>
+                                <p
+                                    class="col-6 col-md-12 d-flex justify-content-start align-content-center text-secondary  ">
+                                    <i class="fad fa-gas-pump fa-fw font-18px "></i>
+                                    <span class=" my-auto ml-1">Bensin</span>
+                                </p>
+                                <p
+                                    class=" col-6 col-md-12 d-flex justify-content-start align-content-center text-secondary ">
+                                    <i class="fad fa-chair-office fa-fw font-18px "></i>
+                                    <span class=" my-auto ml-1">5 Kursi</span>
+                                </p>
+                                <p
+                                    class="col-6 col-md-12 d-flex justify-content-start align-content-center text-secondary ">
+                                    <i class="fab fa-whmcs fa-fw font-18px "></i>
+                                    <span class=" my-auto ml-1">Otomatis</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 text-right">
+                            <h4 class=" text-muted">{{car.type}}</h4>
+                            <h2 class=" font-weight-bold text-dark">{{car.price}}</h2>
+                            <div class=" d-flex mt-3 justify-content-end">
+                                <a href="#" class="btn  btn-primary ">Detail</a>
+                                <a href="#" class="btn  ml-2 btn-secondary ">Sewa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/each}}

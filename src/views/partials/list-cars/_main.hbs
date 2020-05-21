@@ -1,0 +1,30 @@
+<div class="container-fluid px-5 listcars-container bg-light ">
+    <div class="row">
+        <div class="col-md-3 pt-2 listcars-sidenav px-lg-5  bg-light">
+            <h2>Filter</h2>
+            {{> _sidenav-filter}}
+        </div>
+        <div class="col-md-9 pt-2 px-lg-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="">30 Car found</h2>
+                </div>
+                <div class="form-group col-12 col-md-4 ml-md-auto mt-3">
+                    <div class="input-group listcars-search">
+                        <input type="text" class="form-control bg-transparent listcars-input-search border-0"
+                            placeholder="Search">
+                        <div class="input-group-prepend mr-n1">
+                            <button class="btn btn-search rounded-circle ">
+                                <i class="fad fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                {{> _cars cars=cars }}
+
+            </div>
+        </div>
+    </div>
+</div>
