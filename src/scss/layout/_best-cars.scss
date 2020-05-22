@@ -3,8 +3,8 @@
 	overflow-x: hidden;
 	.swiper {
 		overflow: hidden;
+
 		&__nav {
-			// margin: 0 -20px;
 			position: absolute;
 			top: 50%;
 			z-index: 2;
@@ -25,8 +25,24 @@
 		}
 
 		&-slide {
-			border-radius: 0px 0px 10px 10px !important;
-			// background-color: #f3f3f;
+			// height: 100% !important;
+			border-radius: 10px 10px 10px 10px !important;
+			height: 370px !important;
+			display: flex;
+			align-content: stretch !important;
+			align-items: stretch !important;
+			margin-bottom: 0;
+		}
+
+		&--card {
+			border: 0;
+			height: 100%;
+			min-width: 100%;
+			background-color: transparent !important;
+			position: relative;
+			text-align: center;
+			padding-bottom: 20px;
+
 			::before {
 				content: '';
 				background-color: $secondary;
@@ -41,6 +57,10 @@
 				transition: 0.1s all ease-in-out;
 				-webkit-clip-path: circle(28.4% at 93% 100%);
 				clip-path: circle(28.4% at 93% 100%);
+			}
+
+			img {
+				height: 190px;
 			}
 
 			.card__brand {
@@ -62,17 +82,11 @@
 			}
 
 			&:hover {
-				// & {
-				// 	border-radius: 0px 0px 10px 10px !important;
-				// 	box-shadow: 0 0 2px 10px rgba($secondary, $alpha: 0.5);
-				// }
-
 				::before {
 					height: 77%;
 					-webkit-clip-path: circle(113.7% at 93% 100%);
 					clip-path: circle(113.7% at 93% 100%);
 					// -webkit-clip-path: circle(65% at 50% 84%);
-					// clip-path: circle(65% at 50% 84%);
 				}
 				.card__brand {
 					text-align: center;
@@ -93,12 +107,30 @@
 				}
 			}
 		}
+	}
+}
 
-		&--card {
-			border: none;
-			background-color: transparent !important;
-			position: relative;
-			text-align: center;
+@include media-breakpoint-only(md) {
+	.best-cars {
+		.swiper {
+			overflow: hidden;
+			&-slide {
+				height: 390px !important;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.best-cars {
+		.swiper {
+			overflow: hidden;
+			&-slide {
+				height: 500px !important;
+			}
+
+			// &--card {
+			// }
 		}
 	}
 }

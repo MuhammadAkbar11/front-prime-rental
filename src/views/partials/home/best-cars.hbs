@@ -13,7 +13,6 @@
                 <!-- Swiper -->
                 <div class="swiper-container  slider-cars swiper position-relative mx-auto px-3 w-100">
                     <div class="swiper-wrapper">
-
                         {{#each cars as |car| }}
                         <div class="swiper-slide ">
                             {{> ../components/card  className="swiper--card" image=car.image brand=car.brand price=car.price type=car.type  }}

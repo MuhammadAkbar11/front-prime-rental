@@ -4,10 +4,17 @@
 		top: 10rem !important;
 	}
 
-	.row .col &__card {
-		border: none;
-		background: transparent;
+	&-col {
+		display: flex;
+		justify-content: stretch;
+		align-content: stretch;
+	}
 
+	&__card {
+		// border: none;
+		background: transparent;
+		display: flex;
+		justify-content: space-between !important;
 		background-color: rgba(131, 131, 131, 0);
 		transition: 0.15s ease-in-out;
 		::before {

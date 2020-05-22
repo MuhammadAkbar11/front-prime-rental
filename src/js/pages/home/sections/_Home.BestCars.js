@@ -26,12 +26,12 @@ export const sliderBestCar = () => {
 				spaceBetween: 40,
 			},
 			768: {
-				slidesPerView: 3,
-				spaceBetween: 30,
+				slidesPerView: 2,
+				spaceBetween: 10,
 			},
 			902: {
 				slidesPerView: 3,
-				spaceBetween: 25,
+				spaceBetween: 10,
 			},
 			1024: {
 				slidesPerView: 4,

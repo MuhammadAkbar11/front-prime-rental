@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "webpack-dev-server  --config webpack.dev.js --open --color",
-		"build": "webpack --watch  --config webpack.prod.js"
+		"build": "webpack --config webpack.prod.js"
 	},
 	"keywords": [],
 	"author": "",

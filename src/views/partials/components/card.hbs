@@ -1,9 +1,13 @@
 <div class="card {{className}} ">
-    <img class="img-fluid" src="{{image}}" alt="">
-    <div class="card-body">
-        <h6 class="card__brand">{{brand}}</h6>
-        <h5 class="card__type font-md-20px">{{type}}</h5>
-        <h5 class="card__price ">{{price}}/hari</h5>
-        <a href="detail.html" class="btn card__btn mt-2">Detail</a>
+    <div class="d-flex flex-column">
+        <div class="">
+            <img class="img-fluid" src="{{image}}" alt="">
+        </div>
+        <div class="card-body d-flex flex-column justify-content-center align-content-end">
+            <h6 class="card__brand">{{brand}}</h6>
+            <h5 class="card__type font-md-20px">{{type}}</h5>
+            <h5 class="card__price ">{{price}}/hari</h5>
+            <a href="detail.html" class="btn card__btn mt-2">Detail</a>
+        </div>
     </div>
 </div>
