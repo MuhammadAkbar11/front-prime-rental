@@ -1,0 +1,37 @@
+.preloader {
+	position: fixed;
+	z-index: 20000;
+	height: 100vh;
+	width: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: $secondary;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.text-loader {
+		position: relative;
+		font-weight: 700;
+		font-size: 3.6em;
+	}
+
+	.text-loader .text-wrapper {
+		position: relative;
+		display: inline-block;
+		padding-top: 0.2em;
+		padding-right: 0.05em;
+		padding-bottom: 0.1em;
+		overflow: hidden;
+	}
+
+	.text-loader .letter {
+		transform: translateY(-2em);
+		color: $primary;
+		font-family: $montSerrat;
+		display: inline-block;
+		line-height: 1em;
+	}
+}
