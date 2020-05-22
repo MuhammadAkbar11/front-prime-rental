@@ -34,6 +34,28 @@
 				background: set-text-color($primary);
 				@include transition-ease;
 			}
+
+			&.open {
+				background: transparent;
+
+				&::before {
+					background: set-text-color($primary);
+					height: 6px;
+					width: 40px;
+					right: -3rem;
+					left: 0;
+					transform: rotate(45deg) translate(6px, 8px) !important;
+				}
+
+				&::after {
+					left: 0;
+					background: set-text-color($primary);
+					height: 6px;
+					width: 40px;
+					right: -3rem;
+					transform: rotate(-45deg) translate(6px, -7px) !important;
+				}
+			}
 		}
 	}
 
@@ -66,18 +88,9 @@
 				background: set-text-color($secondary);
 				@include transition-ease;
 			}
-		}
-	}
 
-	&.open {
-		.menu-btn__burger {
-			left: 0;
-
-			height: 6px;
 			&.open {
-				// transform: rotate(180deg);
 				background: transparent;
-				// left: 1rem !important;
 
 				&::before {
 					background: set-text-color($secondary);

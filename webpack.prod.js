@@ -5,10 +5,13 @@ const WebpackMerge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const TerserPlugin = require('terser-webpack-plugin');
+
+const _data = require('./src/cars.json');
 
 module.exports = WebpackMerge(_common, {
 	mode: 'production',
@@ -16,21 +19,68 @@ module.exports = WebpackMerge(_common, {
 		filename: 'dist/js/[name].bundle.js',
 		path: path.resolve(__dirname, 'build'),
 	},
+	watch: true,
+	watchOptions: {
+		ignored: /node_modules/,
+	},
 	plugins: [
 		new webpack.LoaderOptionsPlugin({
 			options: {
 				handlebarsLoader: {},
+				postcss: [autoprefixer()],
 			},
 		}),
-		// new HtmlWebpackPlugin({
-		// 	template: './templates/home.html',
-		// 	filename: 'home.html',
-		// 	templateParameters: _globals.title,
-		// }),
+		new CopyPlugin({
+			patterns: [
+				{ from: 'src/img', to: 'dist/static/img' },
+				{ from: 'src/svg', to: 'dist/static/svg' },
+			],
+		}),
+		new webpack.ProvidePlugin({
+			$: 'jquery',
+			jQuery: 'jquery',
+		}),
 		new HtmlWebpackPlugin({
-			title: 'test',
-			template: './src/views/home-2.hbs',
-			filename: 'test.html',
+			title: 'PrimeRental | Home',
+			template: './src/views/home.hbs',
+			filename: 'index.html',
+			templateParameters: _data,
+		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Detail',
+			template: './src/views/detail.hbs',
+			filename: 'detail.html',
+			templateParameters: _data,
+		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Tentang Kami',
+			template: './src/views/about.hbs',
+			filename: 'about.html',
+			templateParameters: _data,
+		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Login',
+			template: './src/views/login.hbs',
+			filename: 'login.html',
+			templateParameters: _data,
+		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Registrasi',
+			template: './src/views/registrasi.hbs',
+			filename: 'registrasi.html',
+			templateParameters: _data,
+		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Kontak Kami',
+			template: './src/views/contact.hbs',
+			filename: 'contact.html',
+			templateParameters: _data,
+		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Mobil Kami',
+			template: './src/views/list-cars.hbs',
+			filename: 'list-cars.html',
+			templateParameters: _data,
 		}),
 		new MiniCssExtractPlugin({
 			filename: 'dist/css/[name].min.css',
@@ -50,7 +100,14 @@ module.exports = WebpackMerge(_common, {
 	},
 	module: {
 		rules: [
-			{ test: /\.handlebars$/, loader: 'handlebars-loader' },
+			{
+				test: /\.hbs$/,
+				use: [
+					{
+						loader: 'handlebars-loader',
+					},
+				],
+			},
 			{
 				test: /\.css$/,
 				exclude: /node_modules/,

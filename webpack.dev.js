@@ -8,8 +8,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 
-const Handlebars = require('handlebars');
-
 const _data = require('./src/cars.json');
 
 module.exports = WebpackMerge(_common, {
@@ -42,8 +40,8 @@ module.exports = WebpackMerge(_common, {
 
 		new CopyPlugin({
 			patterns: [
-				{ from: 'src/img', to: 'assets/dist/static/img' },
-				{ from: 'src/svg', to: 'assets/dist/static/svg' },
+				{ from: 'src/img', to: 'dist/static/img' },
+				{ from: 'src/svg', to: 'dist/static/svg' },
 			],
 		}),
 		new HtmlWebpackPlugin({
