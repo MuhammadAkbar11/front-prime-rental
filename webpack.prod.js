@@ -14,15 +14,18 @@ const TerserPlugin = require('terser-webpack-plugin');
 const _data = require('./src/cars.json');
 
 module.exports = WebpackMerge(_common, {
+	watch: true,
+	watchOptions: {
+		ignored: /node_modules/,
+		aggregateTimeout: 200,
+		poll: 1000,
+	},
 	mode: 'production',
 	output: {
 		filename: 'dist/js/[name].bundle.js',
 		path: path.resolve(__dirname, 'build'),
 	},
-	watch: true,
-	watchOptions: {
-		ignored: /node_modules/,
-	},
+
 	plugins: [
 		new webpack.LoaderOptionsPlugin({
 			options: {

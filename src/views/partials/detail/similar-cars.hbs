@@ -1,5 +1,5 @@
-<section class="similar-car  pt-5">
-    <div class="container ">
+<section class="similar-car pt-5">
+    <div class="container-fluid px-4 ">
         <div class="row ">
             <div class="col-md-12 ml-auto my-4 pt-md-5 text-center text-md-left pr-4">
                 <span class="text-white font-5  font-md-6 text-secondary ">MOBIL YANG</span>
@@ -8,13 +8,34 @@
             </div>
         </div>
         <div class="row justify-content-center align-items-center align-content-center   ">
-            <div class="col-12 my-auto">
+            <div class="col-11 mx-auto my-auto">
                 <!-- Swiper -->
                 <div class="swiper-container  similar-cars position-relative mx-auto px-3 w-100">
                     <div class="swiper-wrapper d-flex align-items-stretch">
                         {{#each cars as |car| }}
+
                         <div class="swiper-slide pt-2  ">
-                            {{> ../components/card  className="swiper--card" image=car.image brand=car.brand price=car.price type=car.type  }}
+                            <div class="card card-stretch swiper--card">
+                                <div class="d-flex flex-column mt-auto">
+                                    <div class="card--img">
+                                        <img height="150" class="" src="{{car.image}}" alt="">
+                                    </div>
+                                    <div
+                                        class="card-body d-flex flex-column justify-content-center align-content-end mt-auto">
+                                        <h6 class="card__brand">{{car.brand}}</h6>
+                                        <h5 class="card__type font-md-20px">{{car.type}}</h5>
+                                        <h5 class="card__price ">{{car.price}}/hari</h5>
+                                        <div class=" d-flex  text-warning justify-content-center  ">
+                                            <i class="fas fa-star "></i>
+                                            <i class="fas fa-star  ml-1"></i>
+                                            <i class="fas fa-star  ml-1"></i>
+                                            <i class="fas fa-star-half-alt  ml-1"></i>
+                                            <i class="far fa-star  ml-1"></i>
+                                        </div>
+                                        <a href="detail.html" class="btn card__btn mt-2">Detail</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         {{/each}}
                     </div>

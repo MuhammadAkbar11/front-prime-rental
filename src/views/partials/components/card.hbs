@@ -1,13 +1,23 @@
-<div class="card {{className}} ">
-    <div class="d-flex flex-column">
-        <div class="">
-            <img class="img-fluid" src="{{image}}" alt="">
+<div class="card {{className}}  ">
+    <div class="d-flex flex-column mt-auto">
+        <div class="swiper-img">
+            <img class="" src="{{image}}" alt="">
+
         </div>
-        <div class="card-body d-flex flex-column justify-content-center align-content-end">
+        <div class="card-body d-flex flex-column justify-content-center align-content-end mt-auto">
             <h6 class="card__brand">{{brand}}</h6>
             <h5 class="card__type font-md-20px">{{type}}</h5>
             <h5 class="card__price ">{{price}}/hari</h5>
-            <a href="detail.html" class="btn card__btn mt-2">Detail</a>
+            <div class=" d-flex  text-warning justify-content-center  ">
+                <i class="fas fa-star "></i>
+                <i class="fas fa-star  ml-1"></i>
+                <i class="fas fa-star  ml-1"></i>
+                <i class="fas fa-star-half-alt  ml-1"></i>
+                <i class="far fa-star  ml-1"></i>
+            </div>
+            <a href="detail.html" class="btn card__btn mt-2">
+                Detail
+            </a>
         </div>
     </div>
 </div>

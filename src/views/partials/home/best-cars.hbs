@@ -9,13 +9,13 @@
         </div>
 
         <div class="row justify-content-center ">
-            <div class="col-11 col-lg-11 mx-auto  ">
+            <div class="col-11 mx-auto  ">
                 <!-- Swiper -->
-                <div class="swiper-container  slider-cars swiper position-relative mx-auto px-3 w-100">
-                    <div class="swiper-wrapper">
+                <div class="swiper-container slider-cars swiper position-relative mx-auto px-3 w-100">
+                    <div class="swiper-wrapper py-2">
                         {{#each cars as |car| }}
-                        <div class="swiper-slide ">
-                            {{> ../components/card  className="swiper--card" image=car.image brand=car.brand price=car.price type=car.type  }}
+                        <div class="swiper-slide card-stretch">
+                            {{> ../components/card  className="swiper--card shadow-sm" image=car.image brand=car.brand price=car.price type=car.type  }}
                         </div>
                         {{/each}}
 

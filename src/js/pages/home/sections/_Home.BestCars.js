@@ -9,7 +9,8 @@ export const sliderBestCar = () => {
 		loop: true,
 		loopFillGroupWithBlank: true,
 		slidesPerView: 1,
-		centeredSlides: true,
+		spaceBetween: 40,
+
 		autoplay: {
 			delay: 2500,
 			disableOnInteraction: false,
@@ -21,19 +22,19 @@ export const sliderBestCar = () => {
 			prevEl: '.swiper__nav-prev',
 		},
 		breakpoints: {
-			640: {
+			580: {
 				slidesPerView: 2,
-				spaceBetween: 40,
+				spaceBetween: 10,
 			},
 			768: {
 				slidesPerView: 2,
-				spaceBetween: 10,
+				spaceBetween: 20,
 			},
-			902: {
+			992: {
 				slidesPerView: 3,
-				spaceBetween: 10,
+				spaceBetween: 30,
 			},
-			1024: {
+			1140: {
 				slidesPerView: 4,
 				spaceBetween: 30,
 			},

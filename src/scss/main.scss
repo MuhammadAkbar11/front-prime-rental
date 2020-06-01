@@ -23,4 +23,9 @@
 
 body {
 	font-family: $montSerrat;
+
+	&.hide {
+		height: 100vh !important;
+		overflow: hidden;
+	}
 }

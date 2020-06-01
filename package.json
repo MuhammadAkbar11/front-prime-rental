@@ -5,7 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "webpack-dev-server  --config webpack.dev.js --open --color",
-		"build": "webpack --config webpack.prod.js"
+		"build": "webpack --config webpack.prod.js",
+		"test": "webpack --watch --config webpack.prod.js --info-verbosity verbose"
 	},
 	"keywords": [],
 	"author": "",
@@ -47,6 +48,7 @@
 	"dependencies": {
 		"animejs": "^3.2.0",
 		"jquery": "^3.5.1",
-		"popper.js": "^1.16.1"
+		"popper.js": "^1.16.1",
+		"sweetalert2": "^9.13.1"
 	}
 }

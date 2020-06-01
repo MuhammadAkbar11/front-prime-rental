@@ -6,7 +6,6 @@ export const similarSlider = () => {
 		loop: true,
 		loopFillGroupWithBlank: true,
 		slidesPerView: 1,
-		centeredSlides: true,
 		autoplay: {
 			delay: 2500,
 			disableOnInteraction: false,
@@ -18,21 +17,21 @@ export const similarSlider = () => {
 			prevEl: '.swiper__nav-prev',
 		},
 		breakpoints: {
-			640: {
+			580: {
 				slidesPerView: 2,
-				spaceBetween: 40,
+				spaceBetween: 10,
 			},
 			768: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			992: {
 				slidesPerView: 3,
 				spaceBetween: 30,
 			},
-			902: {
-				slidesPerView: 3,
-				spaceBetween: 50,
-			},
-			1024: {
+			1140: {
 				slidesPerView: 4,
-				spaceBetween: 10,
+				spaceBetween: 30,
 			},
 		},
 	});
