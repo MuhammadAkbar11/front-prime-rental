@@ -86,6 +86,12 @@ module.exports = WebpackMerge(_common, {
 			filename: 'list-cars.html',
 			templateParameters: _data,
 		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Form Penyewaan',
+			template: './src/views/form-rental.hbs',
+			filename: 'form-rental.html',
+			templateParameters: _data,
+		}),
 	],
 
 	module: {

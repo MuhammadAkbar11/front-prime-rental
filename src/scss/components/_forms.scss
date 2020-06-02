@@ -1,0 +1,26 @@
+#form-pickup-address {
+	transition: 0.2s ease-out all;
+	&.hide {
+		height: 0px !important;
+		transform: scaleY(0);
+		transform-origin: 0 0;
+	}
+	&.show {
+		height: auto !important;
+		transition: 0.1s;
+		transform: scaleY(1);
+		transform-origin: 0 0;
+	}
+}
+.form-check-driver {
+	input,
+	label {
+		cursor: pointer !important;
+	}
+}
+
+#method_pay {
+	label {
+		color: $secondary !important;
+	}
+}
