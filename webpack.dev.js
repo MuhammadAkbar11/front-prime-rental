@@ -92,6 +92,12 @@ module.exports = WebpackMerge(_common, {
 			filename: 'form-rental.html',
 			templateParameters: _data,
 		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Struk',
+			template: './src/views/receipt-transactions.hbs',
+			filename: 'receipt.html',
+			templateParameters: _data,
+		}),
 	],
 
 	module: {
