@@ -1,0 +1,19 @@
+.main-content {
+	height: max-content;
+	padding: {
+		top: 30px;
+	}
+	background-color: $secondary;
+
+	.content-banner {
+		min-height: 50vh;
+		width: 100%;
+		padding: {
+			bottom: 3rem !important;
+		}
+
+		&-content {
+			height: 100%;
+		}
+	}
+}

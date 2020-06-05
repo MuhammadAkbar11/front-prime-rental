@@ -85,6 +85,24 @@ module.exports = WebpackMerge(_common, {
 			filename: 'list-cars.html',
 			templateParameters: _data,
 		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Form Penyewaan',
+			template: './src/views/form-rental.hbs',
+			filename: 'form-rental.html',
+			templateParameters: _data,
+		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Struk',
+			template: './src/views/receipt-transactions.hbs',
+			filename: 'receipt.html',
+			templateParameters: _data,
+		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Layanan Kami',
+			template: './src/views/service.hbs',
+			filename: 'service.html',
+			templateParameters: _data,
+		}),
 		new MiniCssExtractPlugin({
 			filename: 'dist/css/[name].min.css',
 		}),

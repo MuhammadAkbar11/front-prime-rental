@@ -98,6 +98,12 @@ module.exports = WebpackMerge(_common, {
 			filename: 'receipt.html',
 			templateParameters: _data,
 		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Layanan Kami',
+			template: './src/views/service.hbs',
+			filename: 'service.html',
+			templateParameters: _data,
+		}),
 	],
 
 	module: {
