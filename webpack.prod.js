@@ -11,6 +11,8 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const TerserPlugin = require('terser-webpack-plugin');
 
+const node_dir = __dirname + '/node_modules';
+
 const _data = require('./src/cars.json');
 
 module.exports = WebpackMerge(_common, {
@@ -25,7 +27,11 @@ module.exports = WebpackMerge(_common, {
 		filename: 'dist/js/[name].bundle.js',
 		path: path.resolve(__dirname, 'build'),
 	},
-
+	resolve: {
+		alias: {
+			jquery: 'jquery/src/jquery',
+		},
+	},
 	plugins: [
 		new webpack.LoaderOptionsPlugin({
 			options: {
@@ -153,17 +159,20 @@ module.exports = WebpackMerge(_common, {
 					},
 				],
 			},
-			// {
-			// 	test: /\.(svg|png|jpe?g|gif)$/i,
-			// 	use: {
-			// 		loader: 'file-loader',
-			// 		options: {
-			// 			name: '[path][name].[ext]',
-			// 			outputPath: 'assets/',
-			// 			useRelativePath: true,
-			// 		},
-			// 	},
-			// },
+			{
+				// Exposes jQuery for use outside Webpack build
+				test: require.resolve('jquery'),
+				use: [
+					{
+						loader: 'expose-loader',
+						options: 'jQuery',
+					},
+					{
+						loader: 'expose-loader',
+						options: '$',
+					},
+				],
+			},
 			{
 				test: /\.scss$/,
 				exclude: /node_modules/,

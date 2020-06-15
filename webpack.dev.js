@@ -21,7 +21,11 @@ module.exports = WebpackMerge(_common, {
 		index: 'index.html',
 		port: 2001,
 	},
-
+	resolve: {
+		alias: {
+			jquery: 'jquery/src/jquery',
+		},
+	},
 	plugins: [
 		new webpack.LoaderOptionsPlugin({
 			options: {
@@ -29,15 +33,10 @@ module.exports = WebpackMerge(_common, {
 				postcss: [autoprefixer()],
 			},
 		}),
-		// new MiniCssExtractPlugin({
-		// 	filename: 'css/[name].css',
-		// }),
-
 		new webpack.ProvidePlugin({
 			$: 'jquery',
 			jQuery: 'jquery',
 		}),
-
 		new CopyPlugin({
 			patterns: [
 				{ from: 'src/img', to: 'dist/static/img' },
@@ -149,6 +148,20 @@ module.exports = WebpackMerge(_common, {
 						options: {
 							include: path.join(__dirname, 'src'),
 						},
+					},
+				],
+			},
+			{
+				// Exposes jQuery for use outside Webpack build
+				test: require.resolve('jquery'),
+				use: [
+					{
+						loader: 'expose-loader',
+						options: 'jQuery',
+					},
+					{
+						loader: 'expose-loader',
+						options: '$',
 					},
 				],
 			},
