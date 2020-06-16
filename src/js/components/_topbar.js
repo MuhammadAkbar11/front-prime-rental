@@ -11,3 +11,9 @@ export const fixedTopbar = () => {
 		// }
 	});
 };
+
+export const dropDownNav = (e) => {
+	e.preventDefault();
+
+	$('.profileDropDown').dropdown('toggle');
+};

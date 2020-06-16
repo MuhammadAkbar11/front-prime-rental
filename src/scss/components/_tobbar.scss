@@ -2,3 +2,16 @@
 	position: fixed !important;
 	z-index: 25000;
 }
+
+.profileDropDown {
+	width: max-content !important;
+	padding: {
+		left: 0.98rem;
+		right: 0.98rem;
+	}
+	.dropdown-menu-nav {
+		display: flex !important;
+		flex-direction: column !important;
+		box-shadow: 0 0.2rem rgba($secondary, $alpha: 0.5);
+	}
+}
