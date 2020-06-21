@@ -103,6 +103,13 @@ module.exports = WebpackMerge(_common, {
 			filename: 'service.html',
 			templateParameters: _data,
 		}),
+		// dashboard
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | My Profile',
+			template: './src/views/dashboard/profile.hbs',
+			filename: 'profile.html',
+			templateParameters: _data,
+		}),
 	],
 
 	module: {

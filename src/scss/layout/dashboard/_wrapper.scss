@@ -1,0 +1,65 @@
+.dashboard--wrapper {
+	width: 100%;
+	background-color: rgb(255, 255, 255);
+	display: grid;
+	position: relative;
+	grid-template-areas: 'sidebar topbar' 'sidebar main';
+	overflow: hidden;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto 1fr;
+	height: 100vh;
+
+	@import 'topbar';
+	@import 'sidebar';
+
+	.dashboard--content {
+		position: relative;
+		padding: {
+			top: 2.4rem;
+		}
+		top: 0;
+		grid-area: main;
+		background-color: #ffffff !important;
+		height: auto;
+		min-height: max-content;
+		overflow-y: scroll;
+		width: auto;
+
+		&::-webkit-scrollbar {
+			width: 0.55em;
+		}
+
+		&::-webkit-scrollbar-track {
+			-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: rgba($bg-public, $alpha: 0);
+			outline: 1px solid rgba($primary, $alpha: 0);
+		}
+
+		&:hover {
+			&::-webkit-scrollbar-track {
+				-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background-color: rgba($color: gray, $alpha: 0.7);
+				outline: 1px solid rgba($primary, $alpha: 0.8);
+				border-radius: 2px;
+			}
+		}
+
+		.dashboard--main {
+			position: relative;
+			height: max-content;
+			width: 100%;
+			padding: {
+				left: 1rem;
+				right: 1rem;
+			}
+		}
+
+		@import 'footer';
+	}
+}

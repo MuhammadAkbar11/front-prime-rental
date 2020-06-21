@@ -11,24 +11,6 @@
 			"price": "Rp 450.000",
 			"type": "Hatback",
 			"image": "dist/static/img/datsun-go.png"
-		},
-		{
-			"brand": "Honda Brio",
-			"price": "Rp 300.000",
-			"type": "Hatback",
-			"image": "dist/static/img/honda_brio.png"
-		},
-		{
-			"brand": "Toyota Calya",
-			"price": "Rp 450.000",
-			"type": "Hatback",
-			"image": "dist/static/img/toyota-calya.png"
-		},
-		{
-			"brand": "Toyota Alphard ",
-			"price": "Rp 2.250.000",
-			"type": "Hatback",
-			"image": "dist/static/img/ToyotaAlphard.png"
 		}
 	],
 	"freeCars": [

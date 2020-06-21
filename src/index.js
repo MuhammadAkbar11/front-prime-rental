@@ -7,6 +7,7 @@ import { loadAboutPage } from './js/pages/about/about.page';
 import { loadListCars } from './js/pages/list-cars/list-cars.page';
 import { preloader } from './js/components/_preloader';
 import transactions from './js/pages/transactions/transaction';
+import Dashboard from './js/pages/Dashboard/main.dashboard';
 
 const application = () => {
 	loadHomePage();
@@ -14,6 +15,7 @@ const application = () => {
 	loadAboutPage();
 	loadListCars();
 	transactions();
+	new Dashboard().renderLayouts();
 };
 
 const body = document.querySelector('body');
@@ -25,7 +27,11 @@ document.onreadystatechange = function () {
 		application();
 		setTimeout(() => {
 			body.classList.remove('hide');
-			document.getElementById('preloader').style.display = 'none';
+			// document.getElementById('preloader').style.display = 'none';
+
+			const preloader = document.getElementById('preloader');
+
+			body.removeChild(preloader);
 		}, 1000);
 	}
 };

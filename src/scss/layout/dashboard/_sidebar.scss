@@ -1,0 +1,311 @@
+$test-border: 1px solid rgb(0, 0, 0);
+
+.dashboard--sidebar {
+	position: relative;
+	grid-area: sidebar;
+	// position: fixed;
+	width: 240px;
+	height: 100%;
+	background-color: $white;
+
+	.sidebar {
+		&--account {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+
+			&--text {
+				margin-top: 1rem !important;
+				padding: {
+					left: 1rem;
+				}
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: column;
+
+				align-items: flex-start;
+				justify-content: center;
+				line-height: 4px !important;
+			}
+		}
+
+		&--ava {
+			height: 50px;
+			height: 50px;
+			border-radius: 50%;
+			img {
+				background-color: rgba(199, 198, 198, 0.596);
+				border-radius: 50%;
+				height: 100%;
+			}
+		}
+
+		&--logo {
+			position: absolute;
+			bottom: 0em;
+			left: 0;
+			right: 0;
+			color: $secondary;
+
+			a {
+				color: $secondary;
+			}
+			margin: {
+				bottom: 1rem !important;
+			}
+		}
+
+		&--toggle {
+			width: 100% !important;
+			display: flex;
+			justify-content: flex-end;
+			margin: {
+				left: auto;
+			}
+			text-decoration: none !important;
+
+			&:hover,
+			&:focus,
+			&:active {
+				text-decoration: none !important;
+			}
+			i {
+				color: rgba($secondary, $alpha: 1);
+				font-size: 35px;
+			}
+		}
+	}
+
+	.sidebar--nav {
+		.sidebar--devider {
+			width: 80%;
+			border-top: 1px solid rgba($dark, $alpha: 0.3);
+		}
+
+		.nav-item {
+			margin-top: 0.2rem;
+		}
+
+		.nav-link {
+			padding: {
+				top: 0.5rem !important;
+				bottom: 0.5rem !important;
+				left: 1rem !important;
+			}
+			font-size: 18px all;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+			&.active {
+				color: rgba($secondary, $alpha: 1);
+
+				i {
+					color: rgba($secondary, $alpha: 1) !important;
+				}
+
+				span {
+					color: rgba($secondary, $alpha: 1) !important;
+					text-transform: capitalize;
+				}
+			}
+
+			i {
+				color: rgba($secondary, $alpha: 0.6) !important;
+			}
+
+			span {
+				color: rgba($secondary, $alpha: 0.6) !important;
+			}
+
+			&:hover,
+			&:focus,
+			&:visited {
+				color: rgba($secondary, $alpha: 1);
+
+				i {
+					color: rgba($secondary, $alpha: 1) !important;
+				}
+
+				span {
+					color: rgba($secondary, $alpha: 1) !important;
+				}
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.dashboard--sidebar {
+		transition: 0.3s ease-in-out;
+		&.mini--sidebar {
+			background-color: rgba($secondary, $alpha: 1);
+			transition: 0.3s ease-in-out;
+			width: 80px !important;
+			z-index: 10;
+
+			.sidebar {
+				&--logo {
+					position: absolute;
+					bottom: 0em;
+					left: 0;
+					right: 0;
+
+					color: rgba($primary, $alpha: 1);
+					margin: {
+						bottom: 1rem !important;
+					}
+
+					a {
+						color: rgba($primary, $alpha: 1);
+						font-size: 2rem !important;
+						font-weight: 700 !important;
+					}
+				}
+
+				&--toggle {
+					width: 100% !important;
+					display: flex;
+					justify-content: center;
+					margin: {
+						left: auto;
+					}
+					text-decoration: none !important;
+
+					&:hover,
+					&:focus,
+					&:active {
+						text-decoration: none !important;
+					}
+
+					i {
+						color: rgba($primary, $alpha: 1);
+						font-size: 30px;
+					}
+				}
+
+				&--account {
+					width: 100%;
+
+					&--text {
+						margin-left: auto;
+						display: none;
+					}
+				}
+
+				&--ava {
+					height: 50px;
+					height: 50px;
+					border-radius: 50%;
+					img {
+						background-color: rgba(199, 198, 198, 0.596);
+						border-radius: 50%;
+						height: 100%;
+					}
+				}
+
+				// navigation
+				&--nav {
+					width: 100%;
+
+					padding: {
+						left: 0.2rem !important;
+						right: 0.2rem !important;
+					}
+					.sidebar--devider {
+						margin-left: 0px;
+						width: 100%;
+						border-top: 1px solid rgba($primary, $alpha: 0.3);
+					}
+
+					.nav-link {
+						padding: {
+							top: 0.5rem !important;
+							bottom: 0.5rem !important;
+							left: 0rem !important;
+							right: 0.2rem !important;
+						}
+
+						margin-top: 0.5rem;
+						display: flex;
+						// border: $test-border;
+						justify-content: center;
+						text-align: center;
+						font-size: 30px all;
+						font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+						transition: 0.1 ease-in-out !important;
+
+						&.active {
+							color: rgba($primary, $alpha: 1);
+
+							i {
+								color: rgba($primary, $alpha: 1) !important;
+							}
+
+							span {
+								color: rgba($primary, $alpha: 0.5) !important;
+							}
+						}
+
+						i {
+							flex: flex;
+							justify-items: center;
+							font-size: 25px !important;
+							color: rgba($primary, $alpha: 0.6) !important;
+						}
+
+						span {
+							display: none;
+							z-index: 8;
+						}
+
+						&:hover,
+						&:focus,
+						&:visited {
+							color: rgba($primary, $alpha: 1);
+
+							i {
+								color: rgba($primary, $alpha: 1) !important;
+							}
+							span {
+								position: absolute;
+								text-align: left;
+								left: 70px;
+								width: 100px;
+								height: 45px;
+								display: flex;
+								justify-content: flex-end;
+								margin-top: -8px;
+								align-items: center;
+								padding: {
+									left: 1.5rem;
+									right: 1rem;
+								}
+								border-top-right-radius: 5px;
+								border-bottom-right-radius: 5px;
+								background-color: rgba($secondary, $alpha: 1);
+								color: rgba($primary, $alpha: 1) !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.dashboard--sidebar {
+		z-index: 2000 !important;
+		position: fixed;
+		width: 240px;
+
+		left: -250px;
+		transition: 0.3s ease-in-out;
+
+		&.show {
+			left: 0px !important;
+		}
+	}
+}

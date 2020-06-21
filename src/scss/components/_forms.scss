@@ -24,3 +24,48 @@
 		color: $secondary !important;
 	}
 }
+
+.input-group-profile {
+	border: 1px solid rgba($bg-public, $alpha: 0.4) !important;
+	border-radius: 3px;
+
+	&:hover,
+	&:active,
+	&:visited,
+	&:focus {
+		border: 1px solid rgba($bg-public, $alpha: 0.8) !important;
+	}
+
+	.input-profile {
+		outline: none;
+		border: 0em;
+		background-color: transparent;
+
+		&::placeholder {
+			color: $secondary !important;
+		}
+
+		// &:visited {
+		// }
+
+		&:hover,
+		&:active,
+		&:focus {
+			outline: none;
+			border: 0em;
+			background-color: transparent;
+			box-shadow: none !important;
+		}
+	}
+
+	.input-group-prepend {
+		background-color: transparent;
+	}
+
+	.input-group-text {
+		font-weight: 500;
+		border: none;
+		color: #020202dc !important;
+		background-color: transparent !important;
+	}
+}

@@ -30,31 +30,19 @@ const showCollapse = (e) => {
 			const dataStatus = e.target.dataset.status;
 			if ((el != undefined) & (dataStatus != undefined)) {
 				if (dataStatus === 'false') {
-					$(`${collapse}`).collapse('show');
-					$(`${collapse}`).on('shown.bs.collapse', function (e) {
+					$(`${collapse}`).on('show.bs.collapse', function (e) {
 						el.setAttribute('data-status', 'true');
 						el.classList.add('active');
 						icon.className = 'fas fa-chevron-up';
 					});
-
-					// if (!navColl.classList.contains('show')) {
-					// 	$(`${collapse}`).collapse('show');
-					// 	el.setAttribute('data-status', 'true');
-					// 	el.classList.add('active');
-					// 	icon.className = 'fas fa-chevron-up';
-					// }
+					$(`${collapse}`).collapse('show');
 				} else {
-					$(`${collapse}`).collapse('hide');
-					$(`${collapse}`).on('hidden.bs.collapse', function (e) {
+					$(`${collapse}`).on('hide.bs.collapse', function (e) {
 						el.setAttribute('data-status', 'false');
 						el.classList.remove('active');
 						icon.className = 'fas fa-chevron-down';
 					});
-					// const navColl = document.querySelector(collapse);
-					// if (navColl.classList.contains('show')) {
-					// 	$(`${collapse}`).collapse('hide');
-					//
-					// }
+					$(`${collapse}`).collapse('hide');
 				}
 			}
 		}
