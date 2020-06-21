@@ -116,6 +116,12 @@ module.exports = WebpackMerge(_common, {
 			filename: 'profile.html',
 			templateParameters: _data,
 		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Transaksi',
+			template: './src/views/dashboard/list-transactions.hbs',
+			filename: 'list-transactions.html',
+			templateParameters: _data,
+		}),
 	],
 
 	module: {
