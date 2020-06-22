@@ -1,0 +1,39 @@
+.tooltip {
+	&--costum {
+		position: relative;
+		&:hover {
+			.tooltip--item {
+				display: flex;
+				flex-wrap: nowrap;
+			}
+		}
+	}
+
+	&--item {
+		opacity: 0.9;
+		display: none;
+		width: max-content;
+
+		font-size: 15px;
+		background-color: darken($secondary, $amount: 10);
+		padding: 0.2rem 0.6rem;
+		position: absolute;
+		border-radius: 4px;
+		top: -2.3rem;
+		right: 2px;
+		z-index: 100;
+
+		&::before {
+			opacity: 0.9;
+			content: '';
+			position: absolute;
+			background-color: darken($secondary, $amount: 10);
+			width: 12px;
+			height: 12px;
+			bottom: -3px;
+			right: 5px;
+			transform: rotate(-45deg);
+			z-index: -1;
+		}
+	}
+}

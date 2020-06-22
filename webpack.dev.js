@@ -20,7 +20,7 @@ module.exports = WebpackMerge(_common, {
 		contentBase: path.resolve(__dirname, 'assest/pages'),
 		index: 'index.html',
 		port: 2001,
-		open: 'Google Chrome'
+		open: 'Google Chrome',
 	},
 	resolve: {
 		alias: {
@@ -39,13 +39,14 @@ module.exports = WebpackMerge(_common, {
 			jQuery: 'jquery',
 		}),
 		new CopyPlugin({
-			patterns: [{
+			patterns: [
+				{
 					from: 'src/img',
-					to: 'dist/static/img'
+					to: 'dist/static/img',
 				},
 				{
 					from: 'src/svg',
-					to: 'dist/static/svg'
+					to: 'dist/static/svg',
 				},
 			],
 		}),
@@ -122,14 +123,23 @@ module.exports = WebpackMerge(_common, {
 			filename: 'list-transactions.html',
 			templateParameters: _data,
 		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | invoice',
+			template: './src/views/dashboard/invoice.hbs',
+			filename: 'invoice.html',
+			templateParameters: _data,
+		}),
 	],
 
 	module: {
-		rules: [{
+		rules: [
+			{
 				test: /\.hbs$/,
-				use: [{
-					loader: 'handlebars-loader',
-				}, ],
+				use: [
+					{
+						loader: 'handlebars-loader',
+					},
+				],
 			},
 
 			{
@@ -158,17 +168,20 @@ module.exports = WebpackMerge(_common, {
 			},
 			{
 				test: /\.(eot|gif|otf|ttf|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-				use: [{
-					loader: 'file-loader',
-					options: {
-						include: path.join(__dirname, 'src'),
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							include: path.join(__dirname, 'src'),
+						},
 					},
-				}, ],
+				],
 			},
 			{
 				// Exposes jQuery for use outside Webpack build
 				test: require.resolve('jquery'),
-				use: [{
+				use: [
+					{
 						loader: 'expose-loader',
 						options: 'jQuery',
 					},

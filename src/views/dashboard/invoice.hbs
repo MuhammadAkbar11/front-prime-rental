@@ -1,0 +1,24 @@
+{{> ../partials/_dashboard/templates/header title=htmlWebpackPlugin.options.title}}
+
+<div class="dashboard--wrapper">
+    {{> ../partials/_dashboard/templates/topbar}}
+    {{> ../partials/_dashboard/templates/sidebar}}
+
+
+    <main class="dashboard--content h-100 ">
+        <div class="dashboard--main pb-5">
+
+            {{> ../partials/_dashboard/pages/invoice-content}}
+        </div>
+
+        <br><br><br>
+
+
+        {{> ../partials/_dashboard/templates/footer}}
+
+    </main>
+
+</div>
+
+
+{{> ../partials/_dashboard/templates/end}}

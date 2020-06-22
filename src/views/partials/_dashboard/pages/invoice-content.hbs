@@ -1,0 +1,246 @@
+<div class="container-fluid">
+
+    <nav aria-label="breadcrumb  " class=" bg-transparent ml-n8 ">
+        <ol class="breadcrumb bg-transparent">
+            <li class="breadcrumb-item   my-auto font-25px font-weight-bold "><a href="transaksi.html"
+                    class=" text-secondary ">
+                    Transaksi</a></li>
+            <li class="breadcrumb-item active text-secondary  my-auto font-20px" aria-current="page">Invoice
+            </li>
+            <li class="breadcrumb-item active text-secondary-50   my-auto font-18px" aria-current="page">Rent-002
+            </li>
+        </ol>
+    </nav>
+
+
+    <div class="row py-2">
+        {{!-- <div class="col-md-4"></div> --}}
+        <div class="col-md-11 mx-auto">
+            <div class="card bg-white border-0  shadow-sm px-2 pt-3 pb-4  ">
+                <div class="card-header border-0 bg-white ">
+                    <div class="d-flex justify-content-between">
+
+                        <h2 class=" text-secondary ">PrimeRental</h2>
+
+                        <div class="dropdown my-auto  ">
+                            <button class="btn btn-outline-secondary btn-sm actions-invoice" type="button">
+                                <i class="fas fa-bars mr-1"></i>
+                                <span>Actions </span>
+                                <i class="fas fa-angle-down ml-1"></i>
+                            </button>
+                            <div class="dropdown-menu font-15px dropdown-menu-right mt-1 "
+                                id="dropdown-menu-actionsInvoice">
+                                <a class="dropdown-item" href="#"><i class="fad fa-print mr-1"></i> Print</a>
+                                <a class="dropdown-item" href="#"><i class="fad fa-times-octagon t mr-1"></i>
+                                    Batalkan
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body ">
+                    <p class=" text-uppercase text-info font-md-40px font-weight-bold text-left  ">Invoice : Rent-002
+                    </p>
+                    <div class="row px-3">
+                        <div class="col-md-6">
+                            <div class="d-flex
+                                flex-column text-secondary ">
+                                <span class="my-auto   font-18px  text-black-50    ">
+                                    No transaksi
+                                </span>
+                                <div class="text-black font-18px d-flex flex-column ">
+                                    <span class="font-28px ">Rent-002</span>
+
+                                </div>
+                            </div>
+
+                            <div class="d-flex mt-2
+                                flex-column text-secondary ">
+                                <span class="my-auto   font-20px  text-black-50    ">
+                                    Tgl Transaksi
+                                </span>
+                                <div class="text-black font-18px d-flex flex-column ">
+
+                                    <span>20 jun 200</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-right">
+
+                            <div class="d-flex mt-2
+                                flex-column text-secondary ">
+                                <span class="my-auto   font-20px  text-black-50    ">
+                                    Status
+                                </span>
+                                <div class="text-black font-18px d-flex flex-column ">
+                                    <span>Menunggu Pembayaran</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row px-3 ">
+                        <hr class="w-100">
+                        <div class="col-md-4">
+                            <div class="d-flex
+                                flex-column text-secondary ">
+                                <span class="my-auto   font-20px  text-black-50    ">
+                                    Kostumer
+                                </span>
+                                <div class="  d-flex flex-column ">
+                                    <span class=" font-25px text-black ">Unit</span>
+                                    <span class="text-black-50 font-18px">
+                                        Unit@gmail.com
+                                    </span>
+                                    <span class=" text-black-50 font-18px ">
+                                        jl.antara
+                                    </span>
+
+
+                                </div>
+                            </div>
+                            <div class="d-flex mt-2
+                                flex-column text-secondary ">
+                                <span class="my-auto   font-20px  text-black-50    ">
+                                    Alamat Penjemputan
+                                </span>
+                                <div class="  d-flex flex-column ">
+                                    <span class=" font-21px text-black ">Unknown</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="d-flex
+                                flex-column text-secondary ">
+                                <span class="my-auto   font-17px  text-black-50    ">
+                                    Tgl Max Pengembalian
+                                </span>
+                                <div class="  d-flex flex-column ">
+                                    <span class=" font-25px text-black ">28 jul 2020</span>
+                                </div>
+                            </div>
+                            <div class="d-flex mt-2
+                                flex-column text-secondary ">
+                                <span class="my-auto   font-17px  text-black-50    ">
+                                    Hari
+                                </span>
+                                <div class="  d-flex flex-column ">
+                                    <span class=" font-25px text-black ">4 hari</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex
+                                flex-column text-secondary ">
+                                <span class="my-auto   font-17px  text-black-50    ">
+                                    Total Harga
+                                </span>
+                                <div class="  d-flex flex-column ">
+                                    <span class=" font-25px text-black ">Rp. 200.000</span>
+                                    <span class=" btn btn-secondary font-weight-bold mt-2  w-50  "> Self driver </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    {{!-- /row --}}
+                    {{!-- row --}}
+                    <div class="row mt-2">
+                        <div class="col-12">
+                            <div class="table-responsive rounded pt-3 ">
+                                <table class="table">
+                                    <thead class=" thead-light ">
+                                        <tr>
+                                            <th colspan="2">Mobil</th>
+                                            <th>Tgl mulai</th>
+                                            <th>Tgl berakhir</th>
+                                            <th>Harga sewa / hari</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">
+                                                <div class="d-flex align-items-center flex-nowrap ">
+                                                    <img height="80" class="" src="dist/static/img/datsun-go.png"
+                                                        alt="">
+                                                    <div class="ml-1 text-wrap">
+                                                        <p class=" font-18px w-100  mb-n1 font-weight-bold ">Datsun Go
+                                                        </p>
+                                                        <small class="mt-0 text-black-50 ">Hatback</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>--</p>
+                                            </td>
+                                            <td>
+                                                <p>--</p>
+                                            </td>
+                                            <td>
+                                                <p>--/hari</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    {{!-- /row --}}
+                    {{!-- row --}}
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <div class="alert alert-info" role="alert">
+                                <p class="  text-secondary font-weight-bold  ">Pembayaran dapat di transfer ke
+                                    nomor
+                                    rekening berikut :
+                                </p>
+                                <span class=" ml-2 ml-md-3 text-secondary ">BRI : 2000-0020-0203</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ml-auto ">
+                            <div class="table-responsive">
+                                <table class="table ">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <h6 class=" text-black-50   ">Harga sewa/hari</h6>
+                                            </td>
+                                            <td>
+                                                <h6>-- hari</h6>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h6 class=" text-black-50   ">Waktu</h6>
+                                            </td>
+                                            <td>
+                                                <h6>-- hari</h6>
+                                            </td>
+                                        </tr>
+                                        <tr class=" bg-white-30 ">
+                                            <td>
+                                                <h6 class=" text-black-50   ">Total</h6>
+                                            </td>
+                                            <td>
+                                                <h6>--</h6>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {{!-- /row --}}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
