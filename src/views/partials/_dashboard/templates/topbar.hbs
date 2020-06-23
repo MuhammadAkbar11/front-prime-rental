@@ -5,36 +5,56 @@
             <i class="fad fa-2x text-secondary fa-toggle-on "></i>
         </a>
         <span class="dropdown ml-auto pr-md-2">
-            <a class="navbar-account nav-link text-secondary " id="navbarAva" data-toggle="dropdown"
+
+            <a class="dashboard-profile--toggle nav-link text-secondary" id="dashboard--profile--toggle"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="javascript:void(0)">
+                <i class=" fa fa-user fa-fw "></i>
+                <span class=" font-18px  ">Unit</span>
+            </a>
+            {{!-- <a href="# " class="dashboard-profile--toggle" id="dashboard--profile--toggle" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class=" fa fa-user fa-fw "></i>
+                <span class=" font-18px  ">Unit</span>
+                <i id="navbar-account-icon" class="fas fa-angle-down ml-1 fa-fw"></i>
+            </a> --}}
+            <div aria-labelledby="dashboard--profile--toggle"
+                class="dropdown-menu dropdown-menu-right text-secondary navbar-dropdownProfile border-0 shadow-sm ">
+                <div class=" dropdown-menu-nav nav text-primary d-flex justify-content-center ">
+                    <div class="d-flex flex-column pt-2 px-2 justify-content-center ">
+                        <img width="80" class=" mx-auto rounded-circle " src="dist/static/img/clients/client2.png"
+                            alt="">
+                        <div class="pt-2">
+                            <p class="text-center  text-black-50 mb-0 ">unit@gmail.com</p>
+                            <p class="text-center font-20px text-dark ">unit</p>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider border border-top w-100 "></div>
+                    <div class="nav ">
+                        <a class="dropdown-item text-secondary " href="test.html">
+                            <i class="fa-fa fad fa-user"></i>
+                            <span class="ml-1">Profil</span></a>
+                        <a class="dropdown-item text-secondary " href="#">
+                            <i class="fa-fa fad fa-lock-open "></i>
+                            <span class="ml-1">Ubah Password</span>
+                        </a>
+                        <div class="dropdown-divider border border-top w-100 "></div>
+                        <a class="dropdown-item text-secondary" href="#">
+                            <i class="fa-fa fad fa-sign-out-alt "></i>
+                            <span class="ml-1">Logout</span></a>
+                    </div>
+                </div>
+            </div>
+
+            {{!-- <a class="navbar-account nav-link text-secondary " id="navbarAva" data-toggle="dropdown"
                 href="javascript:void(0)">
                 <i class=" fa fa-user fa-fw "></i>
                 <span class=" font-18px  ">Unit</span>
                 <i id="navbar-account-icon" class="fas fa-angle-down ml-1 fa-fw"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right text-secondary navbar-dropdownProfile border-0 shadow-sm ">
-                <div class="d-flex flex-column pt-2 px-2 justify-content-center ">
-                    <img width="80" class=" mx-auto rounded-circle " src="dist/static/img/clients/client2.png" alt="">
-                    <div class="pt-2">
-                        <p class="text-center  text-black-50 mb-0 ">unit@gmail.com</p>
-                        <p class="text-center font-20px text-dark ">unit</p>
-                    </div>
-                </div>
-                <div class="dropdown-divider border border-top w-100 "></div>
-                <div class="nav ">
-                    <a class="dropdown-item text-secondary " href="#">
-                        <i class="fa-fa fad fa-user"></i>
-                        <span class="ml-1">Profil</span></a>
-                    <a class="dropdown-item text-secondary " href="#">
-                        <i class="fa-fa fad fa-lock-open "></i>
-                        <span class="ml-1">Ubah Password</span>
-                    </a>
-                    <div class="dropdown-divider border border-top w-100 "></div>
-                    <a class="dropdown-item text-secondary" href="#">
-                        <i class="fa-fa fad fa-sign-out-alt "></i>
-                        <span class="ml-1">Logout</span></a>
-                </div>
 
-            </div>
+
+            </div> --}}
         </span>
     </nav>
 </header>

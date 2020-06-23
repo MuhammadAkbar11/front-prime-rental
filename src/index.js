@@ -16,6 +16,8 @@ const application = () => {
 	loadListCars();
 	transactions();
 	new Dashboard().renderLayouts();
+
+	$('.profile--toggle').dropdown();
 };
 
 const body = document.querySelector('body');
@@ -27,8 +29,6 @@ document.onreadystatechange = function () {
 		application();
 		setTimeout(() => {
 			body.classList.remove('hide');
-			// document.getElementById('preloader').style.display = 'none';
-
 			const preloader = document.getElementById('preloader');
 
 			body.removeChild(preloader);

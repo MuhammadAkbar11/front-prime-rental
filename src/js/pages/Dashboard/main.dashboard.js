@@ -4,13 +4,11 @@ import displayWindowSize from '../../components/_window';
 import DashboardTransaksi from './transaksi.dashboard';
 
 class Dashboard {
-	constructor() {}
-
 	renderLayouts() {
+		displayWindowSize();
 		$('[data-toggle="tooltip"]').tooltip();
 		dashTopbar();
 		dashSidebar();
-		displayWindowSize();
 
 		new DashboardTransaksi().render();
 	}

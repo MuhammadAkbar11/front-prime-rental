@@ -6,8 +6,18 @@ export const fixedTopbar = () => {
 	});
 };
 
-export const dropDownNav = (e) => {
-	e.preventDefault();
+let statusshowProfileDropdown = false;
 
-	$('.profileDropDown').dropdown('toggle');
+export const dropDownNav = (e) => {
+	console.log(e.target);
+
+	if (statusshowProfileDropdown == false) {
+		$('.profileDropDown').dropdown('show');
+
+		statusshowProfileDropdown = true;
+	} else {
+		$('.profileDropDown').dropdown('hide');
+
+		statusshowProfileDropdown = false;
+	}
 };
