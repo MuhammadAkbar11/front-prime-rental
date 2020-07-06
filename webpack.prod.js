@@ -109,6 +109,27 @@ module.exports = WebpackMerge(_common, {
 			filename: 'service.html',
 			templateParameters: _data,
 		}),
+
+		// dashboard
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | My Profile',
+			template: './src/views/dashboard/profile.hbs',
+			filename: 'profile.html',
+			templateParameters: _data,
+		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Transaksi',
+			template: './src/views/dashboard/list-transactions.hbs',
+			filename: 'list-transactions.html',
+			templateParameters: _data,
+		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | invoice',
+			template: './src/views/dashboard/invoice.hbs',
+			filename: 'invoice.html',
+			templateParameters: _data,
+		}),
+
 		new MiniCssExtractPlugin({
 			filename: 'dist/css/[name].min.css',
 		}),

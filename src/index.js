@@ -8,6 +8,7 @@ import { loadListCars } from './js/pages/list-cars/list-cars.page';
 import { preloader } from './js/components/_preloader';
 import transactions from './js/pages/transactions/transaction';
 import Dashboard from './js/pages/Dashboard/main.dashboard';
+import Noty from 'noty';
 
 const application = () => {
 	loadHomePage();
