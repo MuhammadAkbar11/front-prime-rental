@@ -33,14 +33,14 @@ const showCollapse = (e) => {
 					$(`${collapse}`).on('show.bs.collapse', function (e) {
 						el.setAttribute('data-status', 'true');
 						el.classList.add('active');
-						icon.className = 'fas fa-chevron-up';
+						icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
 					});
 					$(`${collapse}`).collapse('show');
 				} else {
 					$(`${collapse}`).on('hide.bs.collapse', function (e) {
 						el.setAttribute('data-status', 'false');
 						el.classList.remove('active');
-						icon.className = 'fas fa-chevron-down';
+						icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
 					});
 					$(`${collapse}`).collapse('hide');
 				}

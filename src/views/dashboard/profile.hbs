@@ -28,7 +28,8 @@
 
                             </div>
                             <div class="card-footer border-0 bg-transparent ">
-                                <button class=" btn btn-outline-secondary btn-block "><span>Upload</span>
+                                <button data-toggle="modal" data-target="#modalUploadPhoto"
+                                    class=" btn btn-outline-secondary btn-block "><span>Upload</span>
                                     <i class="fad fa-camera-alt text-right ml-1 "></i>
                                 </button>
                             </div>
@@ -144,6 +145,29 @@
         {{> ../partials/_dashboard/templates/footer}}
     </main>
 
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalUploadPhoto" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+    aria-labelledby="modalUploadPhotoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalUploadPhotoLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {{!-- <input type="file" id="user_photo" name="user_photo" class="border"> --}}
+                <input type="file" class="dropify" id="user_photo" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 

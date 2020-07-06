@@ -5,7 +5,7 @@ $test-border: 1px solid rgb(0, 0, 0);
 	background-color: rgb(255, 255, 255);
 	display: grid;
 	position: relative;
-	grid-template-areas: 'sidebar topbar''sidebar main';
+	grid-template-areas: 'sidebar topbar' 'sidebar main';
 	overflow: hidden;
 	grid-template-columns: auto 1fr;
 	grid-template-rows: auto 1fr;
@@ -15,7 +15,6 @@ $test-border: 1px solid rgb(0, 0, 0);
 	@import 'sidebar';
 
 	.dashboard--content {
-
 		position: relative;
 
 		padding: {
@@ -24,7 +23,6 @@ $test-border: 1px solid rgb(0, 0, 0);
 
 		top: 0;
 		grid-area: main;
-		background-color: #ffffff !important;
 		min-height: 100%;
 		overflow-y: scroll;
 		width: auto;

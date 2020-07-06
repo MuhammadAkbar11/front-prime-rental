@@ -9,3 +9,8 @@
 @import './tobbar';
 @import './sidebar';
 @import './footer';
+
+.object-center {
+	object-fit: cover;
+	object-position: center;
+}
