@@ -70,12 +70,14 @@ const changeIcon = (status, statusWidth) => {
 				icon.classList.replace('fa-toggle-off', 'fa-toggle-on');
 			} else {
 				icon.classList.replace('fa-toggle-on', 'fa-toggle-off');
+				icon.classList.replace('text-secondary', 'text-primary');
 			}
 		} else {
 			if (statusWidth < 768) {
 				icon.classList.replace('fa-toggle-on', 'fa-toggle-off');
 			} else {
 				icon.classList.replace('fa-toggle-off', 'fa-toggle-on');
+				icon.classList.replace('text-primary', 'text-secondary');
 			}
 		}
 	});
@@ -101,7 +103,8 @@ export const _notMinimizeDasoboardSidebar = () => {
 	if (dashboardToggle.length > 0) {
 		dashboardToggle[0].children[0].className =
 			'fad fa-2x text-secondary fa-toggle-on ';
-		dashboardToggle[1].children[0].className = 'fad fa-2x  fa-toggle-on ';
+		dashboardToggle[1].children[0].className =
+			'fad fa-2x text-secondary  fa-toggle-on ';
 	}
 
 	if (dashboardSidebar) {

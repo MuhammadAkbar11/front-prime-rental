@@ -127,6 +127,18 @@
 				color: rgba($secondary, $alpha: 0.6) !important;
 			}
 
+			kbd {
+				position: absolute;
+				border-radius: 50%;
+				padding: {
+					top: 1px;
+					bottom: 1px;
+				}
+				margin-top: -5px;
+				margin-left: 5px;
+				background-color: $secondary;
+			}
+
 			&:hover,
 			&:focus,
 			&:visited {
@@ -274,6 +286,18 @@
 						span {
 							display: none;
 							z-index: 8;
+						}
+
+						kbd {
+							position: absolute;
+							border-radius: 50%;
+							padding: {
+								top: 1px;
+								bottom: 1px;
+							}
+							margin-top: -7px;
+							margin-left: 18px;
+							background-color: rgba($primary, $alpha: 0.6);
 						}
 
 						&:hover,

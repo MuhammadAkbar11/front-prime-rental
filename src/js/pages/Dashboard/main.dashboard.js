@@ -4,6 +4,7 @@ import displayWindowSize from '../../components/_window';
 import DashboardTransaksi from './transaksi.dashboard';
 
 import 'dropify';
+import InboxDashboard from './inbox.dashboard';
 
 class Dashboard {
 	renderLayouts() {
@@ -27,6 +28,7 @@ class Dashboard {
 		dashSidebar();
 
 		new DashboardTransaksi().render();
+		new InboxDashboard().render();
 	}
 }
 

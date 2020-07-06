@@ -129,6 +129,12 @@ module.exports = WebpackMerge(_common, {
 			filename: 'invoice.html',
 			templateParameters: _data,
 		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Inbox',
+			template: './src/views/dashboard/inbox.hbs',
+			filename: 'inbox.html',
+			templateParameters: _data,
+		}),
 	],
 
 	module: {
