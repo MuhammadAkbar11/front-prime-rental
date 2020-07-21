@@ -7,28 +7,6 @@ class InboxDashboard {
 		this.handleSortTitleMessage();
 	}
 
-	loadArrayTextTitle() {
-		const cardInbox = this.cardInbox;
-		return new Promise((resolve) => {
-			if (this.cardInbox) {
-				const titleMessage = cardInbox.getElementsByClassName(
-					'message-subject'
-				);
-				[...titleMessage].map((title) => {
-					const data = {};
-
-					let titleText = title.textContent
-						.replace(/\s+/g, ' ')
-						.replace(/(\r\n|\n|\r)/gm, ' ');
-					data.arrayText = titleText.split(' ');
-					data.lengthChar = data.arrayText.join('').length;
-					data.content = title;
-					resolve(data);
-				});
-			}
-		});
-	}
-
 	handleSortTitleMessage() {
 		const cardInbox = this.cardInbox;
 
@@ -48,8 +26,6 @@ class InboxDashboard {
 				title.innerHTML = `${sortText} ...`;
 			});
 		}
-
-		// this.title.innerHTML = `${sortText} ...`;
 	}
 }
 

@@ -133,6 +133,12 @@ module.exports = WebpackMerge(_common, {
 		new MiniCssExtractPlugin({
 			filename: 'dist/css/[name].min.css',
 		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Inbox',
+			template: './src/views/dashboard/inbox.hbs',
+			filename: 'inbox.html',
+			templateParameters: _data,
+		}),
 		new CleanWebpackPlugin(),
 	],
 	optimization: {

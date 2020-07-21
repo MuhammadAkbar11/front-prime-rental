@@ -135,6 +135,18 @@ module.exports = WebpackMerge(_common, {
 			filename: 'inbox.html',
 			templateParameters: _data,
 		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Page Not Found',
+			template: './src/views/404.hbs',
+			filename: '404.html',
+			templateParameters: _data,
+		}),
+		new HtmlWebpackPlugin({
+			title: 'PrimeRental | Coming Soon',
+			template: './src/views/coming-soon.hbs',
+			filename: 'coming-soon.html',
+			templateParameters: _data,
+		}),
 	],
 
 	module: {
