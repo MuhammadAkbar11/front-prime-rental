@@ -1,0 +1,21 @@
+._404-wrapper {
+	min-height: 100vh;
+	overflow: hidden;
+	padding: {
+		top: 30px;
+	}
+	background-color: $light;
+
+	._404-main {
+		height: 100%;
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	._404-wrapper {
+		padding: {
+			top: 30px;
+			bottom: 4rem;
+		}
+	}
+}

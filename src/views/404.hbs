@@ -1,0 +1,47 @@
+{{> partials/components/header title=htmlWebpackPlugin.options.title}}
+
+{{> partials/components/_preloader }}
+
+{{> partials/components/navbar_mobile}}
+
+
+<div class="_404-wrapper ">
+    <div class="container-fluid ">
+        <div class="row px-sm-2">
+            <div class="col-12">
+                {{> ./partials/404/_navtop-404  className="navbar-light"  classlink=" text-secondary "  }}
+            </div>
+        </div>
+    </div>
+
+    <section class="_404-main px-sm-2">
+        <div class="container-fluid   h-100">
+
+            <div class="row h-100 px-sm-2 d-flex  pt-4 ">
+                <div
+                    class="col-md-6 order-2 order-md-1 d-flex align-content-center flex-column justify-content-center mt-8 md-md-1">
+                    <p class="font-30px text-dark mb-n1 ml-0 pl-0  ">
+                        Opps....
+                    </p>
+                    <h1 class=" text-secondary font-md-65px font-weight-bold ml-0 pl-0 ">Halaman Tidak Ditemukan.....
+                    </h1>
+                    <p>Nampaknya sesuatu yang kamu cari tidak ditemukan</p>
+                    <div class="mt-2">
+                        <a href="" class="btn btn-outline-secondary rounded-pill"> <i
+                                class="fas fa-arrow-left mr-1"></i>
+                            Kehalaman Utama </a>
+                    </div>
+                </div>
+                <div class="col-md-6 order-1 order-md-2 my-auto ">
+                    <img class=" img-fluid " src="dist/static/svg/page_not_found.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+</div>
+{{!--  --}}
+{{> partials/components/_end }}
