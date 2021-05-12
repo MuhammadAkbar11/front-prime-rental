@@ -40,7 +40,7 @@
 		"sass": "^1.26.5",
 		"sass-loader": "^8.0.2",
 		"style-loader": "^1.2.1",
-		"swiper": "^5.3.8",
+		"swiper": "^6.5.1",
 		"terser-webpack-plugin": "^3.0.1",
 		"toastr": "^2.1.4",
 		"url-loader": "^4.1.0",
